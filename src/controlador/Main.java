@@ -6,7 +6,7 @@ package controlador;
 
 /**
  *
- * @author nn
+ * @author Nicolas
  */
 public class Main {
 
