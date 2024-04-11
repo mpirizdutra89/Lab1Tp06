@@ -30,7 +30,7 @@ public class ControladorMenuPrincipal {
 
     public static void CargarVistaPrincipal() {
         listaProductos = new TreeSet<>();
-        escritorio.setSize(800, 600);
+        escritorio.setSize(1024, 768);
 
         vmp.setContentPane(escritorio);
         vmp.setLocationRelativeTo(null);
