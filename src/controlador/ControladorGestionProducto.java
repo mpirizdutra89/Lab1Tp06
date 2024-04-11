@@ -6,7 +6,7 @@ import vista.VistaConsultaPrecio;
  *
  * @author nn
  */
-public class ControladorGestionPrecio {
+public class ControladorGestionProducto {
      // public static  crear una variable de tipo vistaPRecio
      
       public static void CargarInstancia(VistaConsultaPrecio cr) {
