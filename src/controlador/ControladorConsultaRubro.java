@@ -12,8 +12,7 @@ public class ControladorConsultaRubro {
      
       public static void CargarInstancia(VistaConsultaRubro cr) {
            vcr = cr;
-           //promptTxt();
         }
       
-  
+   
 }
