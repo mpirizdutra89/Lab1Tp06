@@ -12,10 +12,7 @@ public class ControladorGestionProducto {
      
      public static void CargarInstancia(VistaGestionProducto vgp2) {
         vgp = vgp2;
-        ControladorMenuPrincipal.textPrompt(vgp2.getjTxtcodigo(), "Codigo numerico");
-        ControladorMenuPrincipal.textPrompt(vgp2.getjTxtDescripcion(), "Descripcion producto");
-        ControladorMenuPrincipal.textPrompt(vgp2.getjTxtPrecio(), "Precio - 100.00");
-        ControladorMenuPrincipal.textPrompt(vgp2.getjTxtStock(), "Stock");
+        promptTxt();
     }
       
       public static void EventojBtnNuevo(){
@@ -36,12 +33,12 @@ public class ControladorGestionProducto {
       
    
       
-//      
-//      TextPrompt placeholder = new TextPrompt("Apellido Paterno", textField);
-//    placeholder.changeAlpha(0.75f);
-//    placeholder.changeStyle(Font.ITALIC);
-//    JOptionPane.showMessageDialog(null, textField);
-      
+    private static void promptTxt() {
+        ControladorMenuPrincipal.textPrompt(vgp.getjTxtcodigo(), "Codigo numerico");
+        ControladorMenuPrincipal.textPrompt(vgp.getjTxtDescripcion(), "Descripcion producto");
+        ControladorMenuPrincipal.textPrompt(vgp.getjTxtPrecio(), "Precio - 100.00");
+        ControladorMenuPrincipal.textPrompt(vgp.getjTxtStock(), "Stock");
+    }
       
       //fin
 }
