@@ -5,11 +5,15 @@ import vista.VistaConsultaRubro;
 /**
  *
  * @author nn
+ * @author agus1
  */
 public class ControladorConsultaRubro {
-       // public static  crear una variable de tipo vistaRubro
+       public static VistaConsultaRubro vcr = new VistaConsultaRubro();
      
       public static void CargarInstancia(VistaConsultaRubro cr) {
-           //cargar istancia de la vista usando la vaiable de tipo vista
+           vcr = cr;
+           //promptTxt();
         }
+      
+  
 }
