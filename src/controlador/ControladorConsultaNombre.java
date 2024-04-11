@@ -21,6 +21,7 @@ public class ControladorConsultaNombre {
     private static void promptTxt() {
         ControladorMenuPrincipal.textPrompt(vcn.getjTFnombre(), "Ingrese el nombre del producto");
     }
+    
     //Se busca producto
     public static void buscarProducto() {
         eliminarFilas();
