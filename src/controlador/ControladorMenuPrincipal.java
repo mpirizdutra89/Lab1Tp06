@@ -35,6 +35,7 @@ public class ControladorMenuPrincipal {
         vmp.setContentPane(escritorio);
         vmp.setLocationRelativeTo(null);
         vmp.setVisible(true);
+        cargaAutomaticaListaProducto();
     }
 
     public static void jMenuItemProducto() {
@@ -164,6 +165,17 @@ public class ControladorMenuPrincipal {
 
         escritorio.moveToFront(view);
 
+    }
+    
+    private static void cargaAutomaticaListaProducto(){
+        
+            listaProductos.add(new Productos(20,"milanesa",900.0,80,Categorias.COMESTIBLE));
+            listaProductos.add(new Productos(21,"hamburgesa paty",5000.0,50,Categorias.COMESTIBLE));
+            listaProductos.add(new Productos(22,"Lavandina",1000.0,8,Categorias.LIEMPIEZA));
+            listaProductos.add(new Productos(23,"lampaso",3000.0,5,Categorias.LIEMPIEZA));
+            listaProductos.add(new Productos(24,"Kin seduccion",10000.0,8,Categorias.PERFUMERIA));
+            listaProductos.add(new Productos(25,"avon Triker",30000.0,5,Categorias.PERFUMERIA));
+       
     }
 
 //fin
