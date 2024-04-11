@@ -1,8 +1,7 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
+
 package vista;
+
+import javax.swing.ImageIcon;
 
 /**
  *
@@ -15,6 +14,7 @@ public class VistaMenuPrincipal extends javax.swing.JFrame {
      */
     public VistaMenuPrincipal() {
         initComponents();
+        setIconImage(new ImageIcon(getClass().getResource("src/resources/imgs/logo2.png")).getImage());
     }
 
     /**
