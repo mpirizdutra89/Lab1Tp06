@@ -5,6 +5,7 @@
 package vista;
 
 import javax.swing.JComboBox;
+import javax.swing.JTextField;
 
 /**
  *
@@ -17,7 +18,7 @@ public class VistaGestionProducto extends javax.swing.JInternalFrame {
      */
     public VistaGestionProducto() {
         initComponents();
-          //llamar CargarInstancia(this)
+        controlador.ControladorGestionProducto.CargarInstancia(this);
     }
 
     /**
@@ -96,11 +97,6 @@ public class VistaGestionProducto extends javax.swing.JInternalFrame {
 
         jCBxRubro.setBackground(new java.awt.Color(255, 255, 255));
         jCBxRubro.setForeground(new java.awt.Color(0, 0, 0));
-        jCBxRubro.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCBxRubroActionPerformed(evt);
-            }
-        });
 
         jTxtPrecio.setBackground(new java.awt.Color(255, 255, 255));
         jTxtPrecio.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
@@ -123,6 +119,11 @@ public class VistaGestionProducto extends javax.swing.JInternalFrame {
         jBtnBuscar.setForeground(new java.awt.Color(0, 0, 0));
         jBtnBuscar.setText("Buscar");
         jBtnBuscar.setFocusPainted(false);
+        jBtnBuscar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnBuscarActionPerformed(evt);
+            }
+        });
 
         jButton5.setBackground(new java.awt.Color(255, 255, 255));
         jButton5.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
@@ -181,18 +182,33 @@ public class VistaGestionProducto extends javax.swing.JInternalFrame {
         jBtnNuevo.setForeground(new java.awt.Color(0, 0, 0));
         jBtnNuevo.setText("Nuevo");
         jBtnNuevo.setFocusPainted(false);
+        jBtnNuevo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnNuevoActionPerformed(evt);
+            }
+        });
 
         jBtnEditar.setBackground(new java.awt.Color(255, 255, 255));
         jBtnEditar.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jBtnEditar.setForeground(new java.awt.Color(0, 0, 0));
         jBtnEditar.setText("Editar");
         jBtnEditar.setFocusPainted(false);
+        jBtnEditar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnEditarActionPerformed(evt);
+            }
+        });
 
         jBtnEliminar.setBackground(new java.awt.Color(255, 255, 255));
         jBtnEliminar.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jBtnEliminar.setForeground(new java.awt.Color(0, 0, 0));
         jBtnEliminar.setText("Eliminar");
         jBtnEliminar.setFocusPainted(false);
+        jBtnEliminar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnEliminarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -266,9 +282,21 @@ public class VistaGestionProducto extends javax.swing.JInternalFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jCBxRubroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCBxRubroActionPerformed
+    private void jBtnNuevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnNuevoActionPerformed
+        controlador.ControladorGestionProducto.EventojBtnNuevo();
+    }//GEN-LAST:event_jBtnNuevoActionPerformed
+
+    private void jBtnEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnEditarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jCBxRubroActionPerformed
+    }//GEN-LAST:event_jBtnEditarActionPerformed
+
+    private void jBtnEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnEliminarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBtnEliminarActionPerformed
+
+    private void jBtnBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnBuscarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBtnBuscarActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -293,6 +321,24 @@ public class VistaGestionProducto extends javax.swing.JInternalFrame {
     public JComboBox<String> getjCBxRubro() {
         return jCBxRubro;
     }
+
+    public JTextField getjTxtDescripcion() {
+        return jTxtDescripcion;
+    }
+
+    public JTextField getjTxtPrecio() {
+        return jTxtPrecio;
+    }
+
+    public JTextField getjTxtStock() {
+        return jTxtStock;
+    }
+
+    public JTextField getjTxtcodigo() {
+        return jTxtcodigo;
+    }
+    
+    
 
 
 }

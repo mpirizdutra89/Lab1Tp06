@@ -12,7 +12,9 @@ import modelo.EncabezadoTbl;
 import modelo.EscritorioPersonalizado;
 import modelo.Productos;
 import vista.VistaMenuPrincipal;
-
+import java.awt.Font;
+import java.awt.TextField;
+import javax.swing.JTextField;
 /**
  *
  * @author nn
@@ -177,6 +179,13 @@ public class ControladorMenuPrincipal {
             listaProductos.add(new Productos(25,"avon Triker",30000.0,5,Categorias.PERFUMERIA));
        
     }
+    
+       public static void textPrompt(JTextField textField,String titulo){
+        librerias.TextPrompt placeholder = new librerias.TextPrompt(titulo, textField);
+        placeholder.changeAlpha(0.75f);
+        placeholder.changeStyle(Font.ITALIC);
+        
+      }
 
 //fin
 }
