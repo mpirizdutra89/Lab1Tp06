@@ -25,9 +25,10 @@ public class ControladorConsultaNombre {
     //Se busca producto
     public static void buscarProducto() {
         ControladorMenuPrincipal.eliminarFilas(vcn.getjTblDatos());
+        String busqueda = vcn.getjTFnombre().getText().toLowerCase();
         for (modelo.Productos prod : ControladorMenuPrincipal.listaProductos) {
-
-            if (prod.getDescripcion().startsWith(vcn.getjTFnombre().getText())) {
+            String descripcion = prod.getDescripcion().toLowerCase();
+            if (descripcion.startsWith(busqueda)) {
                 ControladorMenuPrincipal.modeloTable.addRow(new Object[]{
                         prod.getCodigo(),
                         prod.getDescripcion(),

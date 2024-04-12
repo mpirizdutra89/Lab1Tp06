@@ -241,7 +241,7 @@ public class ControladorMenuPrincipal {
     for (int i = rowCount - 1; i >= 0; i--) {
         modeloTable.removeRow(i);
     }
-}
+} 
 
 //fin
 }
