@@ -1,5 +1,7 @@
 package controlador;
 
+import static controlador.ControladorGestionProducto.vgp;
+import java.awt.Component;
 import java.util.TreeSet;
 import javax.swing.JInternalFrame;
 import javax.swing.JOptionPane;
@@ -14,6 +16,8 @@ import modelo.Productos;
 import vista.VistaMenuPrincipal;
 import java.awt.Font;
 import java.awt.TextField;
+import java.awt.event.KeyEvent;
+import javax.swing.JPanel;
 import javax.swing.JTextField;
 /**
  *
@@ -43,13 +47,10 @@ public class ControladorMenuPrincipal {
     public static void jMenuItemProducto() {
 
         vista.VistaGestionProducto vgp = new vista.VistaGestionProducto();
-        //seteo el comboBox
-        vgp.getjCBxRubro().addItem("Seleccione Rubro");
-        for (Categorias rubro : Categorias.values()) {
-            vgp.getjCBxRubro().addItem(rubro.toString());
 
+        for (Categorias rubro : Categorias.values()) {
+            vgp.getjCBxRubro().addItem(rubro);
         }
-        //cargo la vista
         cargarVistasInternas(vgp);
 
     }
@@ -83,9 +84,9 @@ public class ControladorMenuPrincipal {
 
         vista.VistaConsultaRubro cr = new vista.VistaConsultaRubro();
 
-         cr.getjCBxRubro().addItem("Seleccione Rubro");
+        
         for (Categorias rubro : Categorias.values()) {
-               cr.getjCBxRubro().addItem(rubro.toString());
+               cr.getjCBxRubro().addItem(rubro);
 
         }
         //tabla
@@ -186,6 +187,39 @@ public class ControladorMenuPrincipal {
         placeholder.changeStyle(Font.ITALIC);
         
       }
+       
+     public static void resetFormContent(JPanel jpnl) {
+        Component[] components = jpnl.getComponents();
+        for (Component component : components) {
+            if (component instanceof JTextField) {
+                JTextField textField = (JTextField) component;
+                textField.setText("");
+            }
+        }
+    }
+     
+     public void resetComboBox(){
+         
+     }
+     
+        
+     
+     public static void EventoSoloNumerico(java.awt.event.KeyEvent e){
+          char c = e.getKeyChar();
+                   if (!Character.isDigit(c)) {
+                    e.consume(); // Consumir el evento para evitar que se ingrese el carácter
+                }
+               
+     }
+     
+     public static boolean EventoValidarNumericos(String cadena){
+         return cadena.matches("^[0-9]+$");
+     }
+     
+      public static boolean EventoValidarDoubles(String cadena){
+         return cadena.matches("^[0-9]+\\.[0-9]{2}$");
+     }
+     
 
 //fin
 }

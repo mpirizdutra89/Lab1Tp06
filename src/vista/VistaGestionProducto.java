@@ -5,7 +5,9 @@
 package vista;
 
 import javax.swing.JComboBox;
+import javax.swing.JPanel;
 import javax.swing.JTextField;
+import modelo.Categorias;
 
 /**
  *
@@ -41,7 +43,7 @@ public class VistaGestionProducto extends javax.swing.JInternalFrame {
         jTxtDescripcion = new javax.swing.JTextField();
         jTxtStock = new javax.swing.JTextField();
         jBtnBuscar = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
+        jBtnReset = new javax.swing.JButton();
         jPnlBotones = new javax.swing.JPanel();
         jBtnNuevo = new javax.swing.JButton();
         jBtnEditar = new javax.swing.JButton();
@@ -60,8 +62,6 @@ public class VistaGestionProducto extends javax.swing.JInternalFrame {
 
         jScrollPane1.setBackground(new java.awt.Color(255, 255, 255));
 
-        jTable1.setBackground(new java.awt.Color(255, 255, 255));
-        jTable1.setForeground(new java.awt.Color(0, 0, 0));
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -95,28 +95,20 @@ public class VistaGestionProducto extends javax.swing.JInternalFrame {
         jPnltxt.setBackground(new java.awt.Color(204, 204, 204));
         jPnltxt.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        jCBxRubro.setBackground(new java.awt.Color(255, 255, 255));
-        jCBxRubro.setForeground(new java.awt.Color(0, 0, 0));
-
-        jTxtPrecio.setBackground(new java.awt.Color(255, 255, 255));
         jTxtPrecio.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        jTxtPrecio.setForeground(new java.awt.Color(0, 0, 0));
 
-        jTxtcodigo.setBackground(new java.awt.Color(255, 255, 255));
         jTxtcodigo.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        jTxtcodigo.setForeground(new java.awt.Color(0, 0, 0));
+        jTxtcodigo.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTxtcodigoKeyTyped(evt);
+            }
+        });
 
-        jTxtDescripcion.setBackground(new java.awt.Color(255, 255, 255));
         jTxtDescripcion.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        jTxtDescripcion.setForeground(new java.awt.Color(0, 0, 0));
 
-        jTxtStock.setBackground(new java.awt.Color(255, 255, 255));
         jTxtStock.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        jTxtStock.setForeground(new java.awt.Color(0, 0, 0));
 
-        jBtnBuscar.setBackground(new java.awt.Color(255, 255, 255));
         jBtnBuscar.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        jBtnBuscar.setForeground(new java.awt.Color(0, 0, 0));
         jBtnBuscar.setText("Buscar");
         jBtnBuscar.setFocusPainted(false);
         jBtnBuscar.addActionListener(new java.awt.event.ActionListener() {
@@ -125,11 +117,14 @@ public class VistaGestionProducto extends javax.swing.JInternalFrame {
             }
         });
 
-        jButton5.setBackground(new java.awt.Color(255, 255, 255));
-        jButton5.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        jButton5.setForeground(new java.awt.Color(0, 0, 0));
-        jButton5.setText("Resetear");
-        jButton5.setFocusPainted(false);
+        jBtnReset.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jBtnReset.setText("Resetear");
+        jBtnReset.setFocusPainted(false);
+        jBtnReset.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnResetActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPnltxtLayout = new javax.swing.GroupLayout(jPnltxt);
         jPnltxt.setLayout(jPnltxtLayout);
@@ -149,7 +144,7 @@ public class VistaGestionProducto extends javax.swing.JInternalFrame {
                             .addComponent(jTxtStock, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
                 .addGroup(jPnltxtLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jBtnReset, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jBtnBuscar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(12, 12, 12))
         );
@@ -166,7 +161,7 @@ public class VistaGestionProducto extends javax.swing.JInternalFrame {
                         .addComponent(jTxtDescripcion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(jTxtPrecio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jBtnReset, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jTxtStock, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
@@ -177,10 +172,9 @@ public class VistaGestionProducto extends javax.swing.JInternalFrame {
         jPnlBotones.setBackground(new java.awt.Color(255, 255, 255));
         jPnlBotones.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        jBtnNuevo.setBackground(new java.awt.Color(255, 255, 255));
         jBtnNuevo.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        jBtnNuevo.setForeground(new java.awt.Color(0, 0, 0));
-        jBtnNuevo.setText("Nuevo");
+        jBtnNuevo.setText("Agregar");
+        jBtnNuevo.setToolTipText("Agregar Producto");
         jBtnNuevo.setFocusPainted(false);
         jBtnNuevo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -188,9 +182,7 @@ public class VistaGestionProducto extends javax.swing.JInternalFrame {
             }
         });
 
-        jBtnEditar.setBackground(new java.awt.Color(255, 255, 255));
         jBtnEditar.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        jBtnEditar.setForeground(new java.awt.Color(0, 0, 0));
         jBtnEditar.setText("Editar");
         jBtnEditar.setFocusPainted(false);
         jBtnEditar.addActionListener(new java.awt.event.ActionListener() {
@@ -199,9 +191,7 @@ public class VistaGestionProducto extends javax.swing.JInternalFrame {
             }
         });
 
-        jBtnEliminar.setBackground(new java.awt.Color(255, 255, 255));
         jBtnEliminar.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        jBtnEliminar.setForeground(new java.awt.Color(0, 0, 0));
         jBtnEliminar.setText("Eliminar");
         jBtnEliminar.setFocusPainted(false);
         jBtnEliminar.addActionListener(new java.awt.event.ActionListener() {
@@ -287,16 +277,24 @@ public class VistaGestionProducto extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_jBtnNuevoActionPerformed
 
     private void jBtnEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnEditarActionPerformed
-        // TODO add your handling code here:
+        controlador.ControladorGestionProducto.EventojBtnEditar();
     }//GEN-LAST:event_jBtnEditarActionPerformed
 
     private void jBtnEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnEliminarActionPerformed
-        // TODO add your handling code here:
+        controlador.ControladorGestionProducto.EventojBtnEliminar();
     }//GEN-LAST:event_jBtnEliminarActionPerformed
 
     private void jBtnBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnBuscarActionPerformed
-        // TODO add your handling code here:
+       controlador.ControladorGestionProducto.EventojBtnBuscar();
     }//GEN-LAST:event_jBtnBuscarActionPerformed
+
+    private void jBtnResetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnResetActionPerformed
+       controlador.ControladorGestionProducto.EventoReset();
+    }//GEN-LAST:event_jBtnResetActionPerformed
+
+    private void jTxtcodigoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTxtcodigoKeyTyped
+        controlador.ControladorMenuPrincipal.EventoSoloNumerico(evt);
+    }//GEN-LAST:event_jTxtcodigoKeyTyped
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -304,8 +302,8 @@ public class VistaGestionProducto extends javax.swing.JInternalFrame {
     private javax.swing.JButton jBtnEditar;
     private javax.swing.JButton jBtnEliminar;
     private javax.swing.JButton jBtnNuevo;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JComboBox<String> jCBxRubro;
+    private javax.swing.JButton jBtnReset;
+    private javax.swing.JComboBox<Categorias> jCBxRubro;
     private javax.swing.JPanel jPnlBotones;
     private javax.swing.JPanel jPnlContenedor;
     private javax.swing.JPanel jPnlTable;
@@ -318,7 +316,7 @@ public class VistaGestionProducto extends javax.swing.JInternalFrame {
     private javax.swing.JTextField jTxtcodigo;
     // End of variables declaration//GEN-END:variables
 
-    public JComboBox<String> getjCBxRubro() {
+    public JComboBox<Categorias> getjCBxRubro() {
         return jCBxRubro;
     }
 
@@ -337,6 +335,12 @@ public class VistaGestionProducto extends javax.swing.JInternalFrame {
     public JTextField getjTxtcodigo() {
         return jTxtcodigo;
     }
+
+    public JPanel getjPnltxt() {
+        return jPnltxt;
+    }
+    
+    
     
     
 

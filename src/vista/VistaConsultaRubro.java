@@ -5,6 +5,7 @@
 package vista;
 
 import javax.swing.JComboBox;
+import modelo.Categorias;
 
 /**
  *
@@ -55,10 +56,10 @@ public class VistaConsultaRubro extends javax.swing.JInternalFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JComboBox<String> jCBxRubro;
+    private javax.swing.JComboBox<Categorias> jCBxRubro;
     // End of variables declaration//GEN-END:variables
 
-    public JComboBox<String> getjCBxRubro() {
+    public JComboBox<Categorias> getjCBxRubro() {
         return jCBxRubro;
     }
     

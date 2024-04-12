@@ -1,6 +1,7 @@
 package controlador;
 
 
+
 import vista.VistaGestionProducto;
 
 /**
@@ -16,7 +17,12 @@ public class ControladorGestionProducto {
     }
       
       public static void EventojBtnNuevo(){
-          
+          try {
+              int codigo=Integer.parseInt(vgp.getjTxtcodigo().getText());
+              //int
+              
+          } catch (Exception e) {
+          }
       }
       
       public static void EventojBtnEditar(){
@@ -31,6 +37,10 @@ public class ControladorGestionProducto {
           
       }
       
+      public static void EventoReset(){
+          ControladorMenuPrincipal.resetFormContent(vgp.getjPnltxt());
+      }
+      
    
       
     private static void promptTxt() {
@@ -39,6 +49,10 @@ public class ControladorGestionProducto {
         ControladorMenuPrincipal.textPrompt(vgp.getjTxtPrecio(), "Precio - 100.00");
         ControladorMenuPrincipal.textPrompt(vgp.getjTxtStock(), "Stock");
     }
+    
+    
+    
+ 
       
       //fin
 }
