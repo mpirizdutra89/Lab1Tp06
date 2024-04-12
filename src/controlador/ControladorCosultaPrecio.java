@@ -40,6 +40,11 @@ public class ControladorCosultaPrecio {
        
        public static void buscarProductosPorPrecio(){
            
+            if (ControladorMenuPrincipal.listaProductos.isEmpty()) {
+        JOptionPane.showMessageDialog(null, "No hay productos en la lista.", "Lista vacía", JOptionPane.WARNING_MESSAGE);
+        return;
+        }
+           
         double precioMin = Double.parseDouble(vcp.getTxtPrecioMin().getText());
         double precioMax = Double.parseDouble(vcp.getTxtPrecioMax().getText());
         
