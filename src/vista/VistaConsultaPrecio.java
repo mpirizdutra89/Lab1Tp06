@@ -5,6 +5,9 @@
 package vista;
 
 import controlador.ControladorCosultaPrecio;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.JOptionPane;
 import javax.swing.JTable;
 import javax.swing.JTextField;
 
@@ -20,8 +23,38 @@ public class VistaConsultaPrecio extends javax.swing.JInternalFrame {
     public VistaConsultaPrecio() {
         initComponents();
         ControladorCosultaPrecio.CargarInstancia(this);
-          
+        agregarListeners();  
     }
+     private void agregarListeners() {
+        TxtPrecioMin.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (e.getSource() == TxtPrecioMin) {
+                    buscarProductos();
+                }
+            }
+        });
+        
+       TxtPrecioMax.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (e.getSource() == TxtPrecioMax) {
+                    buscarProductos();
+                }
+            }
+        });
+    }
+     
+     private void buscarProductos() {
+    if (TxtPrecioMin.getText().isEmpty() || TxtPrecioMax.getText().isEmpty()) {
+        JOptionPane.showMessageDialog(this, "Ambos campos deben estar completos");
+        return;
+    }
+    
+    ControladorCosultaPrecio.buscarProductosPorPrecio();
+}
+     
+     
 
     /**
      * This method is called from within the constructor to initialize the form.
