@@ -19,8 +19,8 @@ public class ControladorCosultaPrecio {
         }
       
        private static void promptTxt() {
-        ControladorMenuPrincipal.textPrompt(vcp.getTxtPrecioMin(), "Precio mínimo");
-        ControladorMenuPrincipal.textPrompt(vcp.getTxtPrecioMax(), "Precio máximo");
+        ControladorMenuPrincipal.textPrompt(vcp.getTxtPrecioMin(), "Precio mín");
+        ControladorMenuPrincipal.textPrompt(vcp.getTxtPrecioMax(), "Precio máx");
     }
        
        private static void validarEntradaNumerica(javax.swing.JTextField textField) {
