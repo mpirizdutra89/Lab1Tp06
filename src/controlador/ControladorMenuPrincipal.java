@@ -198,6 +198,22 @@ public class ControladorMenuPrincipal {
         }
     }
      
+     public static boolean vacioText(JPanel jpnl) {
+        Component[] components = jpnl.getComponents();
+        boolean res = true;
+        for (Component component : components) {
+            if (component instanceof JTextField) {
+                JTextField textField = (JTextField) component;
+                if (textField.getText().isEmpty()) {
+                    res = true;
+                    break;
+                }
+            }
+
+        }
+        return res;
+    }
+     
      public void resetComboBox(){
          
      }
