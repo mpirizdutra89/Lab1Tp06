@@ -153,6 +153,11 @@ public class ControladorMenuPrincipal {
         JOptionPane.showMessageDialog(escritorio, msj, "", tipo);
     }
     
+    public static boolean viewDialogoSiNo(){
+        return JOptionPane.showConfirmDialog(escritorio, "¿Deseas continuar?", "Confirmación", JOptionPane.YES_NO_OPTION)==JOptionPane.YES_OPTION;
+
+    }
+    
     
     private static void cargarVistasInternas(JInternalFrame view) {
         escritorio.removeAll();
@@ -236,6 +241,8 @@ public class ControladorMenuPrincipal {
          return cadena.matches("^[0-9]+\\.[0-9]{2}$");
      }
      
+      
+      
 
 //fin
 }

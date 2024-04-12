@@ -4,6 +4,7 @@
  */
 package vista;
 
+import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
@@ -338,6 +339,22 @@ public class VistaGestionProducto extends javax.swing.JInternalFrame {
 
     public JPanel getjPnltxt() {
         return jPnltxt;
+    }
+
+    public JButton getjBtnBuscar() {
+        return jBtnBuscar;
+    }
+
+    public JButton getjBtnEditar() {
+        return jBtnEditar;
+    }
+
+    public JButton getjBtnEliminar() {
+        return jBtnEliminar;
+    }
+
+    public JButton getjBtnNuevo() {
+        return jBtnNuevo;
     }
     
     

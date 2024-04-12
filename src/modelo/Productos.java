@@ -5,7 +5,7 @@ package modelo;
  * @author nn
  */
 public class Productos implements Comparable<Productos>{
-    private int codigo;
+    private int codigo=-1;
     private String descripcion;
     private Double precio;
     private int stock;
@@ -59,7 +59,12 @@ public class Productos implements Comparable<Productos>{
     public void setRubro(Categorias rubro) {
         this.rubro = rubro;
     }
-
+    
+    
+    public boolean estaVacio() {
+        return descripcion == null && codigo == -1;
+    }
+    
     @Override
     public String toString() {
         return "Productos{" + "codigo=" + codigo + ", descripcion=" + descripcion + ", precio=" + precio + ", stock=" + stock + ", rubro=" + rubro + '}';
