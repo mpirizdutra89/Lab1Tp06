@@ -19,17 +19,18 @@ import java.awt.TextField;
 import java.awt.event.KeyEvent;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+
 /**
  *
  * @author nn
  */
 public class ControladorMenuPrincipal {
 
-    //variables
+    // variables
     public static VistaMenuPrincipal vmp = new VistaMenuPrincipal();
     public static final EscritorioPersonalizado escritorio = new EscritorioPersonalizado();
     public static TreeSet<Productos> listaProductos;
-    //Tablas
+    // Tablas
     public static DefaultTableModel modeloTable;
     private static DefaultTableCellRenderer rightRenderer = new DefaultTableCellRenderer();
     private static DefaultTableCellRenderer centerRenderer = new DefaultTableCellRenderer();
@@ -59,11 +60,11 @@ public class ControladorMenuPrincipal {
         vista.VistaConsultaNombre cn = new vista.VistaConsultaNombre();
 
         armarEncabesados();
-         cn.getjTblDatos().setModel(modeloTable);
-         //alinea las columnas
-         alinearCabeceras(2, "right", cn.getjTblDatos());
-         alinearCabeceras(3, "center", cn.getjTblDatos());
-        //cargo la vista
+        cn.getjTblDatos().setModel(modeloTable);
+        // alinea las columnas
+        alinearCabeceras(2, "right", cn.getjTblDatos());
+        alinearCabeceras(3, "center", cn.getjTblDatos());
+        // cargo la vista
         cargarVistasInternas(cn);
 
     }
@@ -71,11 +72,11 @@ public class ControladorMenuPrincipal {
     public static void jMenuItemPrecio() {
         vista.VistaConsultaPrecio cp = new vista.VistaConsultaPrecio();
 
-        //armarEncabesados();
-        //cp.getjTblDatos().setModel(modeloTable);
-        //alinearCabeceras(2, "right", cp.getjTblDatos());
-        //alinearCabeceras(3, "center", cp.getjTblDatos());
-        //cargo la vista
+        armarEncabesados();
+        cp.getjTable1().setModel(modeloTable);
+        alinearCabeceras(2, "right", cp.getjTable1());
+        alinearCabeceras(3, "center", cp.getjTable1());
+
         cargarVistasInternas(cp);
 
     }
@@ -84,25 +85,24 @@ public class ControladorMenuPrincipal {
 
         vista.VistaConsultaRubro cr = new vista.VistaConsultaRubro();
 
-        
         for (Categorias rubro : Categorias.values()) {
-               cr.getjCBxRubro().addItem(rubro);
+            cr.getjCBxRubro().addItem(rubro);
 
         }
-        //tabla
+        // tabla
 
-        //  armarEncabesados();
-        //cr.getjTblDatos().setModel(modeloTable);
-        //alinearCabeceras(2, "right", cr.getjTblDatos());
-        //alinearCabeceras(3, "center", cr.getjTblDatos());
-        //cargo la vista
+        // armarEncabesados();
+        // cr.getjTblDatos().setModel(modeloTable);
+        // alinearCabeceras(2, "right", cr.getjTblDatos());
+        // alinearCabeceras(3, "center", cr.getjTblDatos());
+        // cargo la vista
         cargarVistasInternas(cr);
 
     }
 
-    //Funciones para tablas
-        private static void alinearCabeceras(int indiceColumna, String dir, JTable tablet) {
-        //  columnAlign.setHorizontalAlignment(SwingConstants.RIGHT);
+    // Funciones para tablas
+    private static void alinearCabeceras(int indiceColumna, String dir, JTable tablet) {
+        // columnAlign.setHorizontalAlignment(SwingConstants.RIGHT);
         // jTblDatos.getColumnModel().getColumn(1).setCellRenderer(columnAlign);
         switch (dir) {
             case "center":
@@ -121,30 +121,27 @@ public class ControladorMenuPrincipal {
         }
 
     }
-    
-          
-     private static void armarEncabesados(){
-         
-          modeloTable= new DefaultTableModel(){
-              public boolean isCellEditable(int f,int c){
-                  return false;
-              }
-          };
-         
-          for (EncabezadoTbl cellProducto : EncabezadoTbl.values()) {
-           
-                 modeloTable.addColumn(cellProducto);
-        }
-     }  
-     
-     private static void resetColumn(JTable tablet){
-          for (int i = tablet.getColumnCount() - 1; i >= 0; i--) {
-                tablet.removeColumn(tablet.getColumnModel().getColumn(i));
+
+    private static void armarEncabesados() {
+
+        modeloTable = new DefaultTableModel() {
+            public boolean isCellEditable(int f, int c) {
+                return false;
             }
-     }
-    
-  
-    
+        };
+
+        for (EncabezadoTbl cellProducto : EncabezadoTbl.values()) {
+
+            modeloTable.addColumn(cellProducto);
+        }
+    }
+
+    private static void resetColumn(JTable tablet) {
+        for (int i = tablet.getColumnCount() - 1; i >= 0; i--) {
+            tablet.removeColumn(tablet.getColumnModel().getColumn(i));
+        }
+    }
+
     public static void viewDialogo(String msj, String titulo, int tipo) {
         JOptionPane.showMessageDialog(escritorio, msj, titulo, tipo);
     }
@@ -152,13 +149,13 @@ public class ControladorMenuPrincipal {
     public static void viewDialogo(String msj, int tipo) {
         JOptionPane.showMessageDialog(escritorio, msj, "", tipo);
     }
-    
-    public static boolean viewDialogoSiNo(){
-        return JOptionPane.showConfirmDialog(escritorio, "¿Deseas continuar?", "Confirmación", JOptionPane.YES_NO_OPTION)==JOptionPane.YES_OPTION;
+
+    public static boolean viewDialogoSiNo() {
+        return JOptionPane.showConfirmDialog(escritorio, "¿Deseas continuar?", "Confirmación",
+                JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION;
 
     }
-    
-    
+
     private static void cargarVistasInternas(JInternalFrame view) {
         escritorio.removeAll();
         escritorio.repaint();
@@ -174,26 +171,26 @@ public class ControladorMenuPrincipal {
         escritorio.moveToFront(view);
 
     }
-    
-    private static void cargaAutomaticaListaProducto(){
-        
-            listaProductos.add(new Productos(20,"milanesa",900.0,80,Categorias.COMESTIBLE));
-            listaProductos.add(new Productos(21,"hamburgesa paty",5000.0,50,Categorias.COMESTIBLE));
-            listaProductos.add(new Productos(22,"Lavandina",1000.0,8,Categorias.LIEMPIEZA));
-            listaProductos.add(new Productos(23,"lampaso",3000.0,5,Categorias.LIEMPIEZA));
-            listaProductos.add(new Productos(24,"Kin seduccion",10000.0,8,Categorias.PERFUMERIA));
-            listaProductos.add(new Productos(25,"avon Triker",30000.0,5,Categorias.PERFUMERIA));
-       
+
+    private static void cargaAutomaticaListaProducto() {
+
+        listaProductos.add(new Productos(20, "milanesa", 900.0, 80, Categorias.COMESTIBLE));
+        listaProductos.add(new Productos(21, "hamburgesa paty", 5000.0, 50, Categorias.COMESTIBLE));
+        listaProductos.add(new Productos(22, "Lavandina", 1000.0, 8, Categorias.LIEMPIEZA));
+        listaProductos.add(new Productos(23, "lampaso", 3000.0, 5, Categorias.LIEMPIEZA));
+        listaProductos.add(new Productos(24, "Kin seduccion", 10000.0, 8, Categorias.PERFUMERIA));
+        listaProductos.add(new Productos(25, "avon Triker", 30000.0, 5, Categorias.PERFUMERIA));
+
     }
-    
-       public static void textPrompt(JTextField textField,String titulo){
+
+    public static void textPrompt(JTextField textField, String titulo) {
         librerias.TextPrompt placeholder = new librerias.TextPrompt(titulo, textField);
         placeholder.changeAlpha(0.75f);
         placeholder.changeStyle(Font.ITALIC);
-        
-      }
-       
-     public static void resetFormContent(JPanel jpnl) {
+
+    }
+
+    public static void resetFormContent(JPanel jpnl) {
         Component[] components = jpnl.getComponents();
         for (Component component : components) {
             if (component instanceof JTextField) {
@@ -202,8 +199,8 @@ public class ControladorMenuPrincipal {
             }
         }
     }
-     
-     public static boolean vacioText(JPanel jpnl) {
+
+    public static boolean vacioText(JPanel jpnl) {
         Component[] components = jpnl.getComponents();
         boolean res = true;
         for (Component component : components) {
@@ -218,31 +215,33 @@ public class ControladorMenuPrincipal {
         }
         return res;
     }
-     
-     public void resetComboBox(){
-         
-     }
-     
-        
-     
-     public static void EventoSoloNumerico(java.awt.event.KeyEvent e){
-          char c = e.getKeyChar();
-                   if (!Character.isDigit(c)) {
-                    e.consume(); // Consumir el evento para evitar que se ingrese el carácter
-                }
-               
-     }
-     
-     public static boolean EventoValidarNumericos(String cadena){
-         return cadena.matches("^[0-9]+$");
-     }
-     
-      public static boolean EventoValidarDoubles(String cadena){
-         return cadena.matches("^[0-9]+\\.[0-9]{2}$");
-     }
-     
-      
-      
 
-//fin
+    public void resetComboBox() {
+
+    }
+
+    public static void EventoSoloNumerico(java.awt.event.KeyEvent e) {
+        char c = e.getKeyChar();
+        if (!Character.isDigit(c)) {
+            e.consume(); // Consumir el evento para evitar que se ingrese el carácter
+        }
+
+    }
+
+    public static boolean EventoValidarNumericos(String cadena) {
+        return cadena.matches("^[0-9]+$");
+    }
+
+    public static boolean EventoValidarDoubles(String cadena) {
+        return cadena.matches("^[0-9]+\\.[0-9]{2}$");
+    }
+
+    public static void eliminarFilas(JTable table) {
+        int rowCount = table.getRowCount();
+        for (int i = rowCount - 1; i >= 0; i--) {
+            modeloTable.removeRow(i);
+        }
+    }
+
+    // fin
 }
