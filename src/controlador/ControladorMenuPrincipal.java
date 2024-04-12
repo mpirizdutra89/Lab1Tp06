@@ -71,11 +71,11 @@ public class ControladorMenuPrincipal {
     public static void jMenuItemPrecio() {
         vista.VistaConsultaPrecio cp = new vista.VistaConsultaPrecio();
 
-        //armarEncabesados();
-        //cp.getjTblDatos().setModel(modeloTable);
-        //alinearCabeceras(2, "right", cp.getjTblDatos());
-        //alinearCabeceras(3, "center", cp.getjTblDatos());
-        //cargo la vista
+        armarEncabesados();
+        cp.getjTable1().setModel(modeloTable);
+        alinearCabeceras(2, "right", cp.getjTable1());
+        alinearCabeceras(3, "center", cp.getjTable1());
+   
         cargarVistasInternas(cp);
 
     }
@@ -236,6 +236,12 @@ public class ControladorMenuPrincipal {
          return cadena.matches("^[0-9]+\\.[0-9]{2}$");
      }
      
+      public static void eliminarFilas(JTable table){
+    int rowCount = table.getRowCount();
+    for (int i = rowCount - 1; i >= 0; i--) {
+        modeloTable.removeRow(i);
+    }
+}
 
 //fin
 }

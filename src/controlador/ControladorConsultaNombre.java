@@ -24,7 +24,7 @@ public class ControladorConsultaNombre {
     
     //Se busca producto
     public static void buscarProducto() {
-        eliminarFilas();
+        ControladorMenuPrincipal.eliminarFilas(vcn.getjTblDatos());
         for (modelo.Productos prod : ControladorMenuPrincipal.listaProductos) {
 
             if (prod.getDescripcion().startsWith(vcn.getjTFnombre().getText())) {
@@ -37,15 +37,6 @@ public class ControladorConsultaNombre {
             }
 
         }
-    }
-    //Se elimina filas de la busqueda
-    private static void eliminarFilas(){
-        
-        int f = vcn.getjTblDatos().getRowCount()-1;
-        for(;f>=0;f--){
-            ControladorMenuPrincipal.modeloTable.removeRow(f);
-        }
-    
     }
     //fin
 }
