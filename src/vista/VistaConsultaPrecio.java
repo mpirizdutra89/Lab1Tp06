@@ -4,6 +4,7 @@
  */
 package vista;
 
+import controlador.ControladorCosultaPrecio;
 import javax.swing.JTable;
 import javax.swing.JTextField;
 
@@ -18,7 +19,8 @@ public class VistaConsultaPrecio extends javax.swing.JInternalFrame {
      */
     public VistaConsultaPrecio() {
         initComponents();
-          //llamar CargarInstancia(this)
+        ControladorCosultaPrecio.CargarInstancia(this);
+          
     }
 
     /**
@@ -36,16 +38,13 @@ public class VistaConsultaPrecio extends javax.swing.JInternalFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
 
-        setTitle("Precio");
+        setTitle("Consulta por Precio");
 
-        TxtPrecioMin.setText("jTextField1");
         TxtPrecioMin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TxtPrecioMinActionPerformed(evt);
             }
         });
-
-        TxtPrecioMax.setText("jTextField2");
 
         javax.swing.GroupLayout jDesktopPane1Layout = new javax.swing.GroupLayout(jDesktopPane1);
         jDesktopPane1.setLayout(jDesktopPane1Layout);
@@ -84,10 +83,10 @@ public class VistaConsultaPrecio extends javax.swing.JInternalFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(TxtPrecioMin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(68, 68, 68)
-                .addComponent(TxtPrecioMax, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(157, 157, 157))
+                .addComponent(TxtPrecioMin, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(56, 56, 56)
+                .addComponent(TxtPrecioMax, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(143, 143, 143))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

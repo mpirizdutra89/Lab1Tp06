@@ -33,10 +33,10 @@
           </Group>
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-              <Component id="TxtPrecioMin" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="68" max="-2" attributes="0"/>
-              <Component id="TxtPrecioMax" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="157" max="-2" attributes="0"/>
+              <Component id="TxtPrecioMin" min="-2" pref="80" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
+              <Component id="TxtPrecioMax" min="-2" pref="80" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="143" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -59,17 +59,11 @@
   </Layout>
   <SubComponents>
     <Component class="javax.swing.JTextField" name="TxtPrecioMin">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="jTextField1"/>
-      </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="TxtPrecioMinActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="TxtPrecioMax">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="jTextField2"/>
-      </Properties>
     </Component>
     <Container class="javax.swing.JDesktopPane" name="jDesktopPane1">
 
