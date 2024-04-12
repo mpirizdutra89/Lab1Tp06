@@ -35,9 +35,11 @@ public class VistaMenuPrincipal extends javax.swing.JFrame {
         jMiPrecio = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(1024, 768));
+
+        jMenuBar1.setFont(new java.awt.Font("Consolas", 0, 14)); // NOI18N
 
         jMenu1.setText("Administracion");
+        jMenu1.setFont(new java.awt.Font("Consolas", 1, 14)); // NOI18N
 
         jMiProductos.setText("Productos");
         jMiProductos.addActionListener(new java.awt.event.ActionListener() {
@@ -50,6 +52,7 @@ public class VistaMenuPrincipal extends javax.swing.JFrame {
         jMenuBar1.add(jMenu1);
 
         jMenu2.setText("Consultas");
+        jMenu2.setFont(new java.awt.Font("Consolas", 1, 14)); // NOI18N
 
         jMiRubro.setText("Por Rubro");
         jMiRubro.addActionListener(new java.awt.event.ActionListener() {
@@ -87,7 +90,7 @@ public class VistaMenuPrincipal extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 519, Short.MAX_VALUE)
+            .addGap(0, 517, Short.MAX_VALUE)
         );
 
         pack();
