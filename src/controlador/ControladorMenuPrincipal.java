@@ -47,12 +47,23 @@ public class ControladorMenuPrincipal {
         
         vmp.setLocationRelativeTo(null);
         vmp.setExtendedState(JFrame.MAXIMIZED_BOTH);
+        
+        vmp.setTitle("Bienvenido al sistema "+nameMsj(nombreUser));
         vmp.setVisible(true);
 
         cargaAutomaticaListaProducto();
     }
     
- 
+ private static String nameMsj(String usuario){
+     if(usuario.equals("luis")|| usuario.equals("juan")){
+          usuario="Profesor "+usuario.toUpperCase().charAt(0) + usuario.substring(1, usuario.length()).toLowerCase();
+        
+     }else{
+           usuario=usuario.toUpperCase().charAt(0) + usuario.substring(1, usuario.length()).toLowerCase();
+        
+     }
+     return usuario;
+ }
 
     public static void jMenuItemProducto() {
 

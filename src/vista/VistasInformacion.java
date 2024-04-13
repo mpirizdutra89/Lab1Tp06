@@ -15,6 +15,8 @@ public class VistasInformacion extends javax.swing.JInternalFrame {
      */
     public VistasInformacion() {
         initComponents();
+        controlador.ControladorInformacion.CargarInstancia(this);
+        
     }
 
     /**
@@ -27,20 +29,29 @@ public class VistasInformacion extends javax.swing.JInternalFrame {
     private void initComponents() {
 
         jPnlContenedor = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
 
         setClosable(true);
         setTitle("Informacion del Equipo");
         setFrameIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/icons/equipo28.png"))); // NOI18N
 
+        jLabel1.setText("jLabel1");
+
         javax.swing.GroupLayout jPnlContenedorLayout = new javax.swing.GroupLayout(jPnlContenedor);
         jPnlContenedor.setLayout(jPnlContenedorLayout);
         jPnlContenedorLayout.setHorizontalGroup(
             jPnlContenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 381, Short.MAX_VALUE)
+            .addGroup(jPnlContenedorLayout.createSequentialGroup()
+                .addGap(145, 145, 145)
+                .addComponent(jLabel1)
+                .addContainerGap(199, Short.MAX_VALUE))
         );
         jPnlContenedorLayout.setVerticalGroup(
             jPnlContenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 341, Short.MAX_VALUE)
+            .addGroup(jPnlContenedorLayout.createSequentialGroup()
+                .addGap(108, 108, 108)
+                .addComponent(jLabel1)
+                .addContainerGap(217, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -65,6 +76,7 @@ public class VistasInformacion extends javax.swing.JInternalFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPnlContenedor;
     // End of variables declaration//GEN-END:variables
 }
