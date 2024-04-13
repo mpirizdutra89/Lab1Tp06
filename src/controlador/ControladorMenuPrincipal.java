@@ -90,21 +90,11 @@ public class ControladorMenuPrincipal {
             cr.getjCBxRubro().addItem(rubro);
 
         }
-<<<<<<< Updated upstream
-        // tabla
-
-        // armarEncabesados();
-        // cr.getjTblDatos().setModel(modeloTable);
-        // alinearCabeceras(2, "right", cr.getjTblDatos());
-        // alinearCabeceras(3, "center", cr.getjTblDatos());
-        // cargo la vista
-=======
  
         armarEncabesados();
         cr.getjTableRubro().setModel(modeloTable);
         alinearCabeceras(2, "right", cr.getjTableRubro());
         alinearCabeceras(3, "center", cr.getjTableRubro());
->>>>>>> Stashed changes
         cargarVistasInternas(cr);
 
     }
