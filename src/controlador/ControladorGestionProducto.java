@@ -41,6 +41,8 @@ public class ControladorGestionProducto {
                 
               }else{
                   ControladorMenuPrincipal.viewDialogo("Todo los campos son obligatorios. Respete el tipo de dato y su formato.", 0);
+                    vgp.getjTxtcodigo().setFocusable(true);
+                    vgp.getjTxtcodigo().requestFocus();
               }
               
           } catch (Exception e) {
