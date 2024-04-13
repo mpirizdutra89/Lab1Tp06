@@ -16,7 +16,8 @@ public enum Usuarios {
     USUARIO_2("FerrandoCarlos", "1234"),
     USUARIO_3("aguz11", "1234"),
     USUARIO_4("luis", "1234"),
-    USUARIO_5("juan", "1234");
+    USUARIO_5("juan", "1234"),
+    USUARIO_6("admin", "1234");
 
     private final String nombreUsuario;
     private final String clave;

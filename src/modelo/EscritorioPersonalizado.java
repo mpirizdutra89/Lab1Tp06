@@ -29,5 +29,8 @@ public class EscritorioPersonalizado extends JDesktopPane {
         // g.drawImage(img, 0, 0,600,800,null);
         g.drawImage(img, 0, 0,null);
     }
+    
+    
+    
 
 }

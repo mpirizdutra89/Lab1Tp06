@@ -4,6 +4,8 @@
  */
 package vista;
 
+import java.awt.Component;
+import java.awt.KeyboardFocusManager;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JPanel;
@@ -23,6 +25,12 @@ public class VistaGestionProducto extends javax.swing.JInternalFrame {
     public VistaGestionProducto() {
         initComponents();
         controlador.ControladorGestionProducto.CargarInstancia(this);
+           Component focusOwner = KeyboardFocusManager.getCurrentKeyboardFocusManager().getFocusOwner();
+        if (focusOwner != null) {
+            System.out.println("El componente con el foco es: " + focusOwner.getClass().getName());
+        } else {
+            System.out.println("Ningún componente tiene el foco.");
+        }
     }
 
     /**
@@ -61,8 +69,10 @@ public class VistaGestionProducto extends javax.swing.JInternalFrame {
         jPnlContenedor.setBackground(new java.awt.Color(255, 255, 255));
 
         jPnlTable.setBackground(new java.awt.Color(255, 255, 255));
+        jPnlTable.setFocusable(false);
 
         jScrollPane1.setBackground(new java.awt.Color(255, 255, 255));
+        jScrollPane1.setFocusable(false);
 
         jTblDatos.setBackground(new java.awt.Color(255, 255, 255));
         jTblDatos.setModel(new javax.swing.table.DefaultTableModel(
@@ -76,6 +86,7 @@ public class VistaGestionProducto extends javax.swing.JInternalFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
+        jTblDatos.setFocusable(false);
         jTblDatos.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jTblDatosMouseClicked(evt);

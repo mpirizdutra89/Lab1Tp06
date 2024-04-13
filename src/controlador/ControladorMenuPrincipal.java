@@ -17,6 +17,8 @@ import vista.VistaMenuPrincipal;
 import java.awt.Font;
 import java.awt.event.KeyEvent;
 
+
+
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
@@ -44,15 +46,18 @@ public class ControladorMenuPrincipal {
         listaProductos = new TreeSet<>();
 
         vmp.setContentPane(escritorio);
-        
+
         vmp.setLocationRelativeTo(null);
         vmp.setExtendedState(JFrame.MAXIMIZED_BOTH);
-        
-        vmp.setTitle("Bienvenido al sistema "+nameMsj(nombreUser));
+
+        vmp.setTitle("Bienvenido al sistema " + nameMsj(nombreUser));
+       
         vmp.setVisible(true);
 
         cargaAutomaticaListaProducto();
     }
+    
+    
     
  private static String nameMsj(String usuario){
      if(usuario.equals("luis")|| usuario.equals("juan")){
@@ -321,6 +326,8 @@ public class ControladorMenuPrincipal {
         
         
     }
+    
+    
 
     // fin
 }

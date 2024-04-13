@@ -1,7 +1,10 @@
 
 package vista;
 
+
+
 import javax.swing.ImageIcon;
+import javax.swing.JMenuItem;
 
 /**
  *
@@ -15,8 +18,10 @@ public class VistaMenuPrincipal extends javax.swing.JFrame {
     public VistaMenuPrincipal() {
         initComponents();
         setIconImage(new ImageIcon(getClass().getResource("/resources/icons/logo48.png")).getImage());
+        
     }
-
+    
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -127,17 +132,7 @@ public class VistaMenuPrincipal extends javax.swing.JFrame {
        controlador.ControladorMenuPrincipal.jMenuInformacion();
     }//GEN-LAST:event_jMenuItemInformacionActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
-    /*public static void main(String args[]) {
-       
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new VistaMenuPrincipal().setVisible(true);
-            }
-        });
-    }*/
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenu jMenu1;
@@ -150,4 +145,11 @@ public class VistaMenuPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMiProductos;
     private javax.swing.JMenuItem jMiRubro;
     // End of variables declaration//GEN-END:variables
+
+    public JMenuItem getjMiProductos() {
+        return jMiProductos;
+    }
+
+
+    
 }
