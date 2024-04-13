@@ -24,23 +24,28 @@ public class ControladorConsultaNombre {
     
     //Se busca producto
     public static void buscarProducto() {
-        ControladorMenuPrincipal.eliminarFilas(vcn.getjTblDatos());
-        String busqueda = vcn.getjTFnombre().getText().toLowerCase();
-        if (!busqueda.isEmpty()) {
-            
-            for (modelo.Productos prod : ControladorMenuPrincipal.listaProductos) {
-                String descripcion = prod.getDescripcion().toLowerCase();
-                
-                if (descripcion.startsWith(busqueda)) {
-                    ControladorMenuPrincipal.modeloTable.addRow(new Object[]{
-                        prod.getCodigo(),
-                        prod.getDescripcion(),
-                        prod.getPrecio(),
-                        prod.getStock()
-                    });
-                }
+        try {
 
+            ControladorMenuPrincipal.eliminarFilas(vcn.getjTblDatos());
+            String busqueda = vcn.getjTFnombre().getText().toLowerCase();
+            if (!busqueda.isEmpty()) {
+
+                for (modelo.Productos prod : ControladorMenuPrincipal.listaProductos) {
+                    String descripcion = prod.getDescripcion().toLowerCase();
+
+                    if (descripcion.startsWith(busqueda)) {
+                        ControladorMenuPrincipal.modeloTable.addRow(new Object[]{
+                            prod.getCodigo(),
+                            prod.getDescripcion(),
+                            prod.getPrecio(),
+                            prod.getStock()
+                        });
+                    }
+
+                }
             }
+        } catch (Exception e) {
+             ControladorMenuPrincipal.viewDialogo("Ocurrio una falla inesperada", "", 0);
         }
     }
     //fin

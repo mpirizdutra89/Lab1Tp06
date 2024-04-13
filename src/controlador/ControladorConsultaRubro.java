@@ -23,29 +23,34 @@ public class ControladorConsultaRubro {
       
       
     public static void buscarProductosPorCategoria() {
-        if (ControladorMenuPrincipal.listaProductos.size()<=0) {
-          ControladorMenuPrincipal.viewDialogo( "No hay productos cargados", "Lista vacía", 0);
-            return;
-        }
-        //System.out.println("Se ejecuto una ves");
-        if (vcr.getjCBxRubro().getSelectedIndex() > 0) {
-           // System.out.println("Entro");
-             ControladorMenuPrincipal.eliminarFilas(vcr.getjTableRubro());
-            Categorias categoria = (Categorias) vcr.getjCBxRubro().getSelectedItem();
+        try {
 
-            for (Productos producto : ControladorMenuPrincipal.listaProductos) {
-                
-                if (producto.getRubro().equals(categoria)) {
+            if (ControladorMenuPrincipal.listaProductos.size() <= 0) {
+                ControladorMenuPrincipal.viewDialogo("No hay productos cargados", "Lista vacía", 0);
+                return;
+            }
+            //System.out.println("Se ejecuto una ves");
+            if (vcr.getjCBxRubro().getSelectedIndex() > 0) {
+                // System.out.println("Entro");
+                ControladorMenuPrincipal.eliminarFilas(vcr.getjTableRubro());
+                Categorias categoria = (Categorias) vcr.getjCBxRubro().getSelectedItem();
 
-                    ControladorMenuPrincipal.modeloTable.addRow(new Object[]{
-                        producto.getCodigo(),
-                        producto.getDescripcion(),
-                        producto.getPrecio(),
-                        producto.getStock()
-                    });
+                for (Productos producto : ControladorMenuPrincipal.listaProductos) {
 
+                    if (producto.getRubro().equals(categoria)) {
+
+                        ControladorMenuPrincipal.modeloTable.addRow(new Object[]{
+                            producto.getCodigo(),
+                            producto.getDescripcion(),
+                            producto.getPrecio(),
+                            producto.getStock()
+                        });
+
+                    }
                 }
             }
+        } catch (Exception e) {
+             ControladorMenuPrincipal.viewDialogo("Ocurrio una falla inesperada", "", 0);
         }
     }
     
