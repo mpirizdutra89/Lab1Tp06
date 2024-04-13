@@ -85,6 +85,10 @@ public class ControladorGestionProducto {
 
         }
     }
+    
+    public static void EventjBtnSalir(){
+        vgp.dispose();
+    }
 
     public static void EventojBtnBuscar() {
         try {

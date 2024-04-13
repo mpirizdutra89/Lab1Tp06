@@ -45,14 +45,14 @@ public class VistaGestionProducto extends javax.swing.JInternalFrame {
         jTxtDescripcion = new javax.swing.JTextField();
         jTxtStock = new javax.swing.JTextField();
         jBtnBuscar = new javax.swing.JButton();
-        jBtnReset = new javax.swing.JButton();
         jPnlBotones = new javax.swing.JPanel();
         jBtnNuevo = new javax.swing.JButton();
         jBtnEditar = new javax.swing.JButton();
         jBtnEliminar = new javax.swing.JButton();
+        jBtnReset = new javax.swing.JButton();
+        jBtnSalir = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(255, 255, 255));
-        setClosable(true);
         setIconifiable(true);
         setTitle("Gestion producto");
         setFrameIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/icons/scaneer.png"))); // NOI18N
@@ -100,13 +100,14 @@ public class VistaGestionProducto extends javax.swing.JInternalFrame {
                 .addContainerGap(15, Short.MAX_VALUE))
         );
 
-        jPnltxt.setBackground(new java.awt.Color(204, 204, 204));
-        jPnltxt.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPnltxt.setBackground(new java.awt.Color(255, 255, 255));
 
         jCBxRubro.setBackground(new java.awt.Color(255, 255, 255));
+        jCBxRubro.setNextFocusableComponent(jBtnNuevo);
 
         jTxtPrecio.setBackground(new java.awt.Color(255, 255, 255));
         jTxtPrecio.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jTxtPrecio.setNextFocusableComponent(jTxtStock);
         jTxtPrecio.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 jTxtPrecioKeyTyped(evt);
@@ -124,9 +125,11 @@ public class VistaGestionProducto extends javax.swing.JInternalFrame {
 
         jTxtDescripcion.setBackground(new java.awt.Color(255, 255, 255));
         jTxtDescripcion.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jTxtDescripcion.setNextFocusableComponent(jTxtPrecio);
 
         jTxtStock.setBackground(new java.awt.Color(255, 255, 255));
         jTxtStock.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jTxtStock.setNextFocusableComponent(jCBxRubro);
         jTxtStock.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 jTxtStockKeyTyped(evt);
@@ -146,18 +149,6 @@ public class VistaGestionProducto extends javax.swing.JInternalFrame {
             }
         });
 
-        jBtnReset.setBackground(new java.awt.Color(255, 255, 255));
-        jBtnReset.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        jBtnReset.setForeground(new java.awt.Color(0, 0, 0));
-        jBtnReset.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/icons/reset64.png"))); // NOI18N
-        jBtnReset.setBorder(null);
-        jBtnReset.setFocusPainted(false);
-        jBtnReset.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBtnResetActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout jPnltxtLayout = new javax.swing.GroupLayout(jPnltxt);
         jPnltxt.setLayout(jPnltxtLayout);
         jPnltxtLayout.setHorizontalGroup(
@@ -174,26 +165,21 @@ public class VistaGestionProducto extends javax.swing.JInternalFrame {
                             .addComponent(jTxtcodigo, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jTxtPrecio, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jTxtStock, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 86, Short.MAX_VALUE)
-                .addGroup(jPnltxtLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jBtnBuscar, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jBtnReset, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addGap(18, 18, 18))
+                .addGap(36, 36, 36)
+                .addComponent(jBtnBuscar)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPnltxtLayout.setVerticalGroup(
             jPnltxtLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPnltxtLayout.createSequentialGroup()
                 .addGap(5, 5, 5)
                 .addGroup(jPnltxtLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPnltxtLayout.createSequentialGroup()
-                        .addGroup(jPnltxtLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jBtnBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTxtcodigo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(36, 36, 36)
-                        .addComponent(jTxtDescripcion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jTxtPrecio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jBtnReset))
+                    .addComponent(jBtnBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTxtcodigo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(36, 36, 36)
+                .addComponent(jTxtDescripcion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jTxtPrecio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jTxtStock, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
@@ -202,13 +188,13 @@ public class VistaGestionProducto extends javax.swing.JInternalFrame {
         );
 
         jPnlBotones.setBackground(new java.awt.Color(255, 255, 255));
-        jPnlBotones.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jBtnNuevo.setBackground(new java.awt.Color(255, 255, 255));
         jBtnNuevo.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jBtnNuevo.setForeground(new java.awt.Color(0, 0, 0));
-        jBtnNuevo.setText("Agregar");
+        jBtnNuevo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/icons/new64.png"))); // NOI18N
         jBtnNuevo.setToolTipText("Agregar Producto");
+        jBtnNuevo.setBorder(null);
         jBtnNuevo.setFocusPainted(false);
         jBtnNuevo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -219,7 +205,9 @@ public class VistaGestionProducto extends javax.swing.JInternalFrame {
         jBtnEditar.setBackground(new java.awt.Color(255, 255, 255));
         jBtnEditar.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jBtnEditar.setForeground(new java.awt.Color(0, 0, 0));
-        jBtnEditar.setText("Editar");
+        jBtnEditar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/icons/save64.png"))); // NOI18N
+        jBtnEditar.setToolTipText("Editar");
+        jBtnEditar.setBorder(null);
         jBtnEditar.setFocusPainted(false);
         jBtnEditar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -230,11 +218,38 @@ public class VistaGestionProducto extends javax.swing.JInternalFrame {
         jBtnEliminar.setBackground(new java.awt.Color(255, 255, 255));
         jBtnEliminar.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jBtnEliminar.setForeground(new java.awt.Color(0, 0, 0));
-        jBtnEliminar.setText("Eliminar");
+        jBtnEliminar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/icons/clear64.png"))); // NOI18N
+        jBtnEliminar.setBorder(null);
         jBtnEliminar.setFocusPainted(false);
         jBtnEliminar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jBtnEliminarActionPerformed(evt);
+            }
+        });
+
+        jBtnReset.setBackground(new java.awt.Color(255, 255, 255));
+        jBtnReset.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jBtnReset.setForeground(new java.awt.Color(0, 0, 0));
+        jBtnReset.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/icons/reset.png"))); // NOI18N
+        jBtnReset.setToolTipText("Resetear");
+        jBtnReset.setBorder(null);
+        jBtnReset.setFocusPainted(false);
+        jBtnReset.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnResetActionPerformed(evt);
+            }
+        });
+
+        jBtnSalir.setBackground(new java.awt.Color(255, 255, 255));
+        jBtnSalir.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jBtnSalir.setForeground(new java.awt.Color(0, 0, 0));
+        jBtnSalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/icons/log_logout_door_1563.png"))); // NOI18N
+        jBtnSalir.setText("Salir");
+        jBtnSalir.setBorder(null);
+        jBtnSalir.setFocusPainted(false);
+        jBtnSalir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnSalirActionPerformed(evt);
             }
         });
 
@@ -249,17 +264,26 @@ public class VistaGestionProducto extends javax.swing.JInternalFrame {
                 .addComponent(jBtnEditar)
                 .addGap(18, 18, 18)
                 .addComponent(jBtnEliminar)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jBtnReset, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jBtnSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(20, 20, 20))
         );
         jPnlBotonesLayout.setVerticalGroup(
             jPnlBotonesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPnlBotonesLayout.createSequentialGroup()
-                .addGap(15, 15, 15)
-                .addGroup(jPnlBotonesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jBtnNuevo, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jBtnEditar, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jBtnEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(10, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPnlBotonesLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPnlBotonesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jBtnNuevo, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jBtnEditar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jBtnEliminar, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(jPnlBotonesLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(jPnlBotonesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jBtnSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jBtnReset, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout jPnlContenedorLayout = new javax.swing.GroupLayout(jPnlContenedor);
@@ -272,10 +296,10 @@ public class VistaGestionProducto extends javax.swing.JInternalFrame {
                     .addGroup(jPnlContenedorLayout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(jPnlContenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jPnlBotones, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(jPnlContenedorLayout.createSequentialGroup()
                                 .addComponent(jPnltxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addComponent(jPnlBotones, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                                .addGap(0, 0, Short.MAX_VALUE)))))
                 .addContainerGap())
         );
         jPnlContenedorLayout.setVerticalGroup(
@@ -285,9 +309,9 @@ public class VistaGestionProducto extends javax.swing.JInternalFrame {
                 .addComponent(jPnlTable, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jPnltxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jPnlBotones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(11, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPnlBotones, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(21, 21, 21))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -346,6 +370,10 @@ public class VistaGestionProducto extends javax.swing.JInternalFrame {
       controlador.ControladorMenuPrincipal.EventoSoloNumerico(evt);
     }//GEN-LAST:event_jTxtStockKeyTyped
 
+    private void jBtnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnSalirActionPerformed
+       controlador.ControladorGestionProducto.EventjBtnSalir();
+    }//GEN-LAST:event_jBtnSalirActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jBtnBuscar;
@@ -353,6 +381,7 @@ public class VistaGestionProducto extends javax.swing.JInternalFrame {
     private javax.swing.JButton jBtnEliminar;
     private javax.swing.JButton jBtnNuevo;
     private javax.swing.JButton jBtnReset;
+    private javax.swing.JButton jBtnSalir;
     private javax.swing.JComboBox<Categorias> jCBxRubro;
     private javax.swing.JPanel jPnlBotones;
     private javax.swing.JPanel jPnlContenedor;
