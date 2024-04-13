@@ -64,6 +64,7 @@ public class VistaGestionProducto extends javax.swing.JInternalFrame {
 
         jScrollPane1.setBackground(new java.awt.Color(255, 255, 255));
 
+        jTblDatos.setBackground(new java.awt.Color(255, 255, 255));
         jTblDatos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -102,6 +103,9 @@ public class VistaGestionProducto extends javax.swing.JInternalFrame {
         jPnltxt.setBackground(new java.awt.Color(204, 204, 204));
         jPnltxt.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        jCBxRubro.setBackground(new java.awt.Color(255, 255, 255));
+
+        jTxtPrecio.setBackground(new java.awt.Color(255, 255, 255));
         jTxtPrecio.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jTxtPrecio.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
@@ -109,15 +113,19 @@ public class VistaGestionProducto extends javax.swing.JInternalFrame {
             }
         });
 
+        jTxtcodigo.setBackground(new java.awt.Color(255, 255, 255));
         jTxtcodigo.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jTxtcodigo.setNextFocusableComponent(jTxtDescripcion);
         jTxtcodigo.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 jTxtcodigoKeyTyped(evt);
             }
         });
 
+        jTxtDescripcion.setBackground(new java.awt.Color(255, 255, 255));
         jTxtDescripcion.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
 
+        jTxtStock.setBackground(new java.awt.Color(255, 255, 255));
         jTxtStock.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jTxtStock.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
@@ -125,17 +133,24 @@ public class VistaGestionProducto extends javax.swing.JInternalFrame {
             }
         });
 
+        jBtnBuscar.setBackground(new java.awt.Color(255, 255, 255));
         jBtnBuscar.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        jBtnBuscar.setText("Buscar");
+        jBtnBuscar.setForeground(new java.awt.Color(0, 0, 0));
+        jBtnBuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/icons/search2-64.png"))); // NOI18N
+        jBtnBuscar.setBorder(null);
         jBtnBuscar.setFocusPainted(false);
+        jBtnBuscar.setNextFocusableComponent(jBtnReset);
         jBtnBuscar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jBtnBuscarActionPerformed(evt);
             }
         });
 
+        jBtnReset.setBackground(new java.awt.Color(255, 255, 255));
         jBtnReset.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        jBtnReset.setText("Resetear");
+        jBtnReset.setForeground(new java.awt.Color(0, 0, 0));
+        jBtnReset.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/icons/reset64.png"))); // NOI18N
+        jBtnReset.setBorder(null);
         jBtnReset.setFocusPainted(false);
         jBtnReset.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -159,37 +174,39 @@ public class VistaGestionProducto extends javax.swing.JInternalFrame {
                             .addComponent(jTxtcodigo, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jTxtPrecio, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jTxtStock, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
-                .addGroup(jPnltxtLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jBtnReset, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jBtnBuscar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(12, 12, 12))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 86, Short.MAX_VALUE)
+                .addGroup(jPnltxtLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jBtnBuscar, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jBtnReset, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addGap(18, 18, 18))
         );
         jPnltxtLayout.setVerticalGroup(
             jPnltxtLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPnltxtLayout.createSequentialGroup()
-                .addGap(10, 10, 10)
+                .addGap(5, 5, 5)
                 .addGroup(jPnltxtLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPnltxtLayout.createSequentialGroup()
                         .addGroup(jPnltxtLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jTxtcodigo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jBtnBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
+                            .addComponent(jBtnBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTxtcodigo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(36, 36, 36)
                         .addComponent(jTxtDescripcion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(jTxtPrecio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jBtnReset, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                    .addComponent(jBtnReset))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jTxtStock, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jCBxRubro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(31, Short.MAX_VALUE))
+                .addContainerGap(36, Short.MAX_VALUE))
         );
 
         jPnlBotones.setBackground(new java.awt.Color(255, 255, 255));
         jPnlBotones.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        jBtnNuevo.setBackground(new java.awt.Color(255, 255, 255));
         jBtnNuevo.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jBtnNuevo.setForeground(new java.awt.Color(0, 0, 0));
         jBtnNuevo.setText("Agregar");
         jBtnNuevo.setToolTipText("Agregar Producto");
         jBtnNuevo.setFocusPainted(false);
@@ -199,7 +216,9 @@ public class VistaGestionProducto extends javax.swing.JInternalFrame {
             }
         });
 
+        jBtnEditar.setBackground(new java.awt.Color(255, 255, 255));
         jBtnEditar.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jBtnEditar.setForeground(new java.awt.Color(0, 0, 0));
         jBtnEditar.setText("Editar");
         jBtnEditar.setFocusPainted(false);
         jBtnEditar.addActionListener(new java.awt.event.ActionListener() {
@@ -208,7 +227,9 @@ public class VistaGestionProducto extends javax.swing.JInternalFrame {
             }
         });
 
+        jBtnEliminar.setBackground(new java.awt.Color(255, 255, 255));
         jBtnEliminar.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jBtnEliminar.setForeground(new java.awt.Color(0, 0, 0));
         jBtnEliminar.setText("Eliminar");
         jBtnEliminar.setFocusPainted(false);
         jBtnEliminar.addActionListener(new java.awt.event.ActionListener() {
