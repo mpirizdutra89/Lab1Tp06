@@ -9,7 +9,7 @@ import vista.*;
 public class ControladorConsultaNombre {
 
     // public static  crear una variable de tipo vistaNombre
-    public static VistaConsultaNombre vcn = new VistaConsultaNombre();
+    public static VistaConsultaNombre vcn ;
 
     public static void CargarInstancia(VistaConsultaNombre vn2) {
         //cargar istancia de la vista usando la vaiable de tipo vista
@@ -26,17 +26,21 @@ public class ControladorConsultaNombre {
     public static void buscarProducto() {
         ControladorMenuPrincipal.eliminarFilas(vcn.getjTblDatos());
         String busqueda = vcn.getjTFnombre().getText().toLowerCase();
-        for (modelo.Productos prod : ControladorMenuPrincipal.listaProductos) {
-            String descripcion = prod.getDescripcion().toLowerCase();
-            if (descripcion.startsWith(busqueda)) {
-                ControladorMenuPrincipal.modeloTable.addRow(new Object[]{
+        if (!busqueda.isEmpty()) {
+            
+            for (modelo.Productos prod : ControladorMenuPrincipal.listaProductos) {
+                String descripcion = prod.getDescripcion().toLowerCase();
+                
+                if (descripcion.startsWith(busqueda)) {
+                    ControladorMenuPrincipal.modeloTable.addRow(new Object[]{
                         prod.getCodigo(),
                         prod.getDescripcion(),
                         prod.getPrecio(),
-                        prod.getStock() 
-                });
-            }
+                        prod.getStock()
+                    });
+                }
 
+            }
         }
     }
     //fin

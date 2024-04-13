@@ -42,7 +42,7 @@ public class ControladorMenuPrincipal {
         vmp.setContentPane(escritorio);
         vmp.setLocationRelativeTo(null);
         vmp.setVisible(true);
-        armarEncabesados();
+       
         cargaAutomaticaListaProducto();
     }
 
@@ -249,10 +249,14 @@ public class ControladorMenuPrincipal {
     }
 
     public static void eliminarFilas(JTable table) {
-        int rowCount = table.getRowCount();
-        for (int i = rowCount - 1; i >= 0; i--) {
-            modeloTable.removeRow(i);
-        }
+        int rowCount = table.getRowCount()-1;
+       // System.out.println(rowCount);
+       
+            for (int i = rowCount; i >= 0; i--) {
+                modeloTable.removeRow(i);
+            }
+        
+        
     }
 
     // fin
