@@ -35,7 +35,7 @@ public class VistaMenuPrincipal extends javax.swing.JFrame {
         jMiPrecio = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(1024, 768));
+        setPreferredSize(new java.awt.Dimension(1024, 800));
 
         jMenu1.setText("Administracion");
 

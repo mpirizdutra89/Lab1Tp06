@@ -1,15 +1,63 @@
 package controlador;
 
+
+
+
+import modelo.Categorias;
+import modelo.Productos;
 import vista.VistaConsultaRubro;
+
+
 
 /**
  *
  * @author nn
+ * @author agus1
  */
 public class ControladorConsultaRubro {
-       // public static  crear una variable de tipo vistaRubro
+       public static VistaConsultaRubro vcr;
      
       public static void CargarInstancia(VistaConsultaRubro cr) {
-           //cargar istancia de la vista usando la vaiable de tipo vista
+           vcr = cr;
         }
+      
+      
+    public static void buscarProductosPorCategoria() {
+        try {
+
+            if (ControladorMenuPrincipal.listaProductos.size() <= 0) {
+                ControladorMenuPrincipal.viewDialogo("No hay productos cargados", "Lista vacía", 0);
+                return;
+            }
+            //System.out.println("Se ejecuto una ves");
+            if (vcr.getjCBxRubro().getSelectedIndex() > 0) {
+                // System.out.println("Entro");
+                ControladorMenuPrincipal.eliminarFilas(vcr.getjTableRubro());
+                Categorias categoria = (Categorias) vcr.getjCBxRubro().getSelectedItem();
+
+                for (Productos producto : ControladorMenuPrincipal.listaProductos) {
+
+                    if (producto.getRubro().equals(categoria)) {
+
+                        ControladorMenuPrincipal.modeloTable.addRow(new Object[]{
+                            producto.getCodigo(),
+                            producto.getDescripcion(),
+                            producto.getPrecio(),
+                            producto.getStock()
+                        });
+
+                    }
+                }
+            }
+        } catch (Exception e) {
+             ControladorMenuPrincipal.viewDialogo("Ocurrio una falla inesperada", "", 0);
+        }
+    }
+    
+  
+    
+    
+    //fin
 }
+      
+
