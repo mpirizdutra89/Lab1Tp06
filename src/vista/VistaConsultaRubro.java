@@ -4,7 +4,11 @@
  */
 package vista;
 
+import controlador.ControladorConsultaRubro;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import javax.swing.JComboBox;
+import javax.swing.JTable;
 import modelo.Categorias;
 
 /**
@@ -18,7 +22,18 @@ public class VistaConsultaRubro extends javax.swing.JInternalFrame {
      */
     public VistaConsultaRubro() {
         initComponents();
-        //llamar CargarInstancia(this)
+        configurarComboBox();
+        ControladorConsultaRubro.CargarInstancia(this);
+    }
+    
+    private void configurarComboBox() {
+        jCBxRubro.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Categorias categoriaSeleccionada = (Categorias) jCBxRubro.getSelectedItem();
+                ControladorConsultaRubro.buscarProductosPorCategoria(categoriaSeleccionada);
+            }
+        });
     }
 
     /**
@@ -30,35 +45,63 @@ public class VistaConsultaRubro extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTableRubro = new javax.swing.JTable();
         jCBxRubro = new javax.swing.JComboBox<>();
 
+        setClosable(true);
+        setIconifiable(true);
         setTitle("Rubro");
+
+        jTableRubro.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Código", "Descripción", "Precio", "Stock"
+            }
+        ));
+        jScrollPane1.setViewportView(jTableRubro);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(95, 95, 95)
-                .addComponent(jCBxRubro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(227, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(214, 214, 214)
+                        .addComponent(jCBxRubro, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(43, 43, 43)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 332, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(48, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(93, 93, 93)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(23, 23, 23)
                 .addComponent(jCBxRubro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(159, Short.MAX_VALUE))
+                .addGap(54, 54, 54)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(94, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<Categorias> jCBxRubro;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable jTableRubro;
     // End of variables declaration//GEN-END:variables
 
+     public JTable getjTableRubro() {
+        return jTableRubro;
+    }
     public JComboBox<Categorias> getjCBxRubro() {
         return jCBxRubro;
     }
