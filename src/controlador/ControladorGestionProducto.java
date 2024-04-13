@@ -43,9 +43,31 @@ public class ControladorGestionProducto {
           }
       }
       
-      public static void EventojBtnEditar(){
-           //resetBtn(false);
-      }
+      public static void EventojBtnEditar() {
+          try {
+
+              if (productoActual != null) {
+                  for (Productos producto : ControladorMenuPrincipal.listaProductos) {
+                      if (productoActual.equals(producto)) {
+                         
+                          producto.setCodigo(productoActual.getCodigo());
+                          producto.setDescripcion(vgp.getjTxtDescripcion().getText());
+                          producto.setPrecio(Double.valueOf(vgp.getjTxtPrecio().getText()));
+                          producto.setStock(Integer.parseInt(vgp.getjTxtStock().getText()));
+                          producto.setRubro((Categorias) vgp.getjCBxRubro().getSelectedItem());
+                           productoActual=null;
+                          break;
+
+                      }
+                  }
+                  resetBtn(false);
+                  EventoReset();
+                  cargarTabla();
+              }
+          } catch (Exception e) {
+              msjGeneral();
+          }
+    }
       
     public static void EventojBtnEliminar() {
         //
@@ -56,6 +78,7 @@ public class ControladorGestionProducto {
                 productoActual=null;//si no le doy null , la referencia de memoria sigue exitiendo, por ende en el treeSet sigue esstando ya q ue apunda a la misma referencia en memoria
                 resetBtn(false);
                 EventoReset();
+                cargarTabla();
             }
 
         }
@@ -74,13 +97,33 @@ public class ControladorGestionProducto {
                 vgp.getjCBxRubro().setSelectedItem(productoActual.getRubro());
 
             } else {
-                ControladorMenuPrincipal.viewDialogo("El codigo no exite", 0);
+                ControladorMenuPrincipal.viewDialogo("El codigo no se encuentra o es invalido.", 0);
                 vgp.getjTxtcodigo().requestFocus();
             }
         } catch (Exception e) {
             msjGeneral();
         }
     }
+    
+    
+    public static void EventoCeldaCliked(){
+        int filaSelect=vgp.getjTblDatos().getSelectedRow();
+        if(filaSelect!=-1){
+            int codigo=(Integer) vgp.getjTblDatos().getValueAt(filaSelect, 0);
+            BuscarXCodigo(codigo);
+            if (productoActual != null) {
+                resetBtn(true);
+                vgp.getjTxtcodigo().setText(productoActual.getCodigo() + "");
+                vgp.getjTxtDescripcion().setText(productoActual.getDescripcion());
+                vgp.getjTxtPrecio().setText(productoActual.getPrecio() + "");
+                vgp.getjTxtStock().setText(productoActual.getStock() + "");
+                vgp.getjCBxRubro().setSelectedItem(productoActual.getRubro());
+
+            } 
+        }
+    }
+    
+  
       
     public static void EventoReset(){
           ControladorMenuPrincipal.resetFormContent(vgp.getjPnltxt());
@@ -116,7 +159,7 @@ public class ControladorGestionProducto {
     }
     
     private static void buscarPorCodigo(){
-      
+        productoActual = null;
         if(validarCodigo()){
                   int codigo=Integer.parseInt(vgp.getjTxtcodigo().getText());
                   for (Productos producto : ControladorMenuPrincipal.listaProductos) {
@@ -128,6 +171,18 @@ public class ControladorGestionProducto {
                       }
                   }
               }
+    }
+    
+    private static void BuscarXCodigo(int codigo) {
+        productoActual = null;
+        for (Productos producto : ControladorMenuPrincipal.listaProductos) {
+            if (codigo == producto.getCodigo()) {
+                productoActual = producto;
+
+                break;
+
+            }
+        }
     }
     
     
@@ -149,8 +204,16 @@ public class ControladorGestionProducto {
     }
       
     
-    private static void cargarTabla(){
-        
+    private static void cargarTabla() {
+        ControladorMenuPrincipal.eliminarFilas(vgp.getjTblDatos());
+        for (Productos prod : ControladorMenuPrincipal.listaProductos) {
+            ControladorMenuPrincipal.modeloTable.addRow(new Object[]{
+                prod.getCodigo(),
+                prod.getDescripcion(),
+                prod.getPrecio(),
+                prod.getStock()
+            });
+        }
     }
       //fin
 }

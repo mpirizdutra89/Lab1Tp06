@@ -249,7 +249,27 @@ public class ControladorMenuPrincipal {
         });
     }
    
-  
+     //formato ejemplo 100.00
+     public static void EventoPrecioKeyType(java.awt.event.KeyEvent evt, String txt) {
+        char c = evt.getKeyChar();
+
+        if (!Character.isDigit(c) && c != KeyEvent.VK_BACK_SPACE && c != KeyEvent.VK_DELETE && c != '.') {
+            evt.consume();
+        } else if (c == '.' && txt.isEmpty()) {
+            evt.consume();
+        } else if (c == '.' && txt.contains(".")) {
+
+            evt.consume();
+        } else if (Character.isDigit(c) && txt.contains(".")) {
+
+            int dotIndex = txt.indexOf('.');
+            int digitsAfterDot = txt.length() - dotIndex - 1;
+            if (digitsAfterDot >= 2) {
+                evt.consume();
+            }
+        }
+    }
+
 
     public static void EventoSoloNumerico(java.awt.event.KeyEvent e) {
     char c = e.getKeyChar();

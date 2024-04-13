@@ -9,7 +9,7 @@ import vista.VistaConsultaPrecio;
  * @author nn
  */
 public class ControladorCosultaPrecio {
-     public static VistaConsultaPrecio vcp = new VistaConsultaPrecio();
+     public static VistaConsultaPrecio vcp ;
      
       public static void CargarInstancia(VistaConsultaPrecio cp) {
            vcp = cp;       

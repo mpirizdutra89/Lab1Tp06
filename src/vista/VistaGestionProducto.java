@@ -75,6 +75,11 @@ public class VistaGestionProducto extends javax.swing.JInternalFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
+        jTblDatos.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTblDatosMouseClicked(evt);
+            }
+        });
         jScrollPane1.setViewportView(jTblDatos);
 
         javax.swing.GroupLayout jPnlTableLayout = new javax.swing.GroupLayout(jPnlTable);
@@ -98,6 +103,11 @@ public class VistaGestionProducto extends javax.swing.JInternalFrame {
         jPnltxt.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jTxtPrecio.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jTxtPrecio.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTxtPrecioKeyTyped(evt);
+            }
+        });
 
         jTxtcodigo.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jTxtcodigo.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -297,6 +307,14 @@ public class VistaGestionProducto extends javax.swing.JInternalFrame {
     private void jTxtcodigoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTxtcodigoKeyTyped
         controlador.ControladorMenuPrincipal.EventoSoloNumerico(evt);
     }//GEN-LAST:event_jTxtcodigoKeyTyped
+
+    private void jTblDatosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTblDatosMouseClicked
+        controlador.ControladorGestionProducto.EventoCeldaCliked();
+    }//GEN-LAST:event_jTblDatosMouseClicked
+
+    private void jTxtPrecioKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTxtPrecioKeyTyped
+       controlador.ControladorMenuPrincipal.EventoPrecioKeyType(evt,jTxtPrecio.getText());
+    }//GEN-LAST:event_jTxtPrecioKeyTyped
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
