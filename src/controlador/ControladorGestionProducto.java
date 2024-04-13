@@ -28,8 +28,11 @@ public class ControladorGestionProducto {
                 double precio=Integer.parseInt(vgp.getjTxtcodigo().getText());
                 int stock=Integer.parseInt(vgp.getjTxtcodigo().getText());
                 Categorias rubro=(Categorias)vgp.getjCBxRubro().getSelectedItem();
-                
                 ControladorMenuPrincipal.listaProductos.add(new Productos(codigo, descripcion, precio, stock, rubro));
+                
+                resetBtn(false);
+                EventoReset();
+                
                 
               }else{
                   ControladorMenuPrincipal.viewDialogo("Todo los campos son obligatorios. Respete el tipo de dato y su formato.", 0);
@@ -47,7 +50,7 @@ public class ControladorGestionProducto {
     public static void EventojBtnEliminar() {
         //
         if (productoActual != null) {
-            System.out.println(productoActual);
+           
             if (ControladorMenuPrincipal.viewDialogoSiNo()) {
                 ControladorMenuPrincipal.listaProductos.remove(productoActual);
                 productoActual=null;//si no le doy null , la referencia de memoria sigue exitiendo, por ende en el treeSet sigue esstando ya q ue apunda a la misma referencia en memoria
@@ -145,5 +148,9 @@ public class ControladorGestionProducto {
               
     }
       
+    
+    private static void cargarTabla(){
+        
+    }
       //fin
 }

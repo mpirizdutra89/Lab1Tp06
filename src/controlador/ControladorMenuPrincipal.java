@@ -52,6 +52,13 @@ public class ControladorMenuPrincipal {
         for (Categorias rubro : Categorias.values()) {
             vgp.getjCBxRubro().addItem(rubro);
         }
+         armarEncabesados();
+        vgp.getjTblDatos().setModel(modeloTable);
+        // alinea las columnas
+        alinearCabeceras(2, "right", vgp.getjTblDatos());
+        alinearCabeceras(3, "center", vgp.getjTblDatos());
+        
+        cargaAutoTablaGestionProductos();
         cargarVistasInternas(vgp);
 
     }
@@ -182,6 +189,14 @@ public class ControladorMenuPrincipal {
         listaProductos.add(new Productos(25, "avon Triker", 30000.0, 5, Categorias.PERFUMERIA));
 
     }
+    
+    private static void cargaAutoTablaGestionProductos(){
+        if(listaProductos.size()>0){
+            for (Productos prod : listaProductos) {
+                modeloTable.addRow(new Object[]{prod.getCodigo(),prod.getDescripcion(),prod.getPrecio(),prod.getStock()});
+            }
+        }
+    }
 
     public static void textPrompt(JTextField textField, String titulo) {
         librerias.TextPrompt placeholder = new librerias.TextPrompt(titulo, textField);
@@ -216,9 +231,7 @@ public class ControladorMenuPrincipal {
         return res;
     }
 
-    public void resetComboBox() {
-
-    }
+  
 
     public static void EventoSoloNumerico(java.awt.event.KeyEvent e) {
         char c = e.getKeyChar();

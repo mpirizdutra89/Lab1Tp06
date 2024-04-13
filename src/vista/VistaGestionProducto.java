@@ -7,6 +7,7 @@ package vista;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JPanel;
+import javax.swing.JTable;
 import javax.swing.JTextField;
 import modelo.Categorias;
 
@@ -36,7 +37,7 @@ public class VistaGestionProducto extends javax.swing.JInternalFrame {
         jPnlContenedor = new javax.swing.JPanel();
         jPnlTable = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        jTblDatos = new javax.swing.JTable();
         jPnltxt = new javax.swing.JPanel();
         jCBxRubro = new javax.swing.JComboBox<>();
         jTxtPrecio = new javax.swing.JTextField();
@@ -63,7 +64,7 @@ public class VistaGestionProducto extends javax.swing.JInternalFrame {
 
         jScrollPane1.setBackground(new java.awt.Color(255, 255, 255));
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        jTblDatos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -74,7 +75,7 @@ public class VistaGestionProducto extends javax.swing.JInternalFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(jTblDatos);
 
         javax.swing.GroupLayout jPnlTableLayout = new javax.swing.GroupLayout(jPnlTable);
         jPnlTable.setLayout(jPnlTableLayout);
@@ -310,7 +311,7 @@ public class VistaGestionProducto extends javax.swing.JInternalFrame {
     private javax.swing.JPanel jPnlTable;
     private javax.swing.JPanel jPnltxt;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
+    private javax.swing.JTable jTblDatos;
     private javax.swing.JTextField jTxtDescripcion;
     private javax.swing.JTextField jTxtPrecio;
     private javax.swing.JTextField jTxtStock;
@@ -355,6 +356,10 @@ public class VistaGestionProducto extends javax.swing.JInternalFrame {
 
     public JButton getjBtnNuevo() {
         return jBtnNuevo;
+    }
+
+    public JTable getjTblDatos() {
+        return jTblDatos;
     }
     
     
