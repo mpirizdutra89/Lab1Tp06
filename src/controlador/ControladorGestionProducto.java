@@ -24,14 +24,16 @@ public class ControladorGestionProducto {
           try {
               if(validar()){
                 int codigo=Integer.parseInt(vgp.getjTxtcodigo().getText());
-                String descripcion=vgp.getjTxtcodigo().getText();
-                double precio=Integer.parseInt(vgp.getjTxtcodigo().getText());
-                int stock=Integer.parseInt(vgp.getjTxtcodigo().getText());
+                String descripcion=vgp.getjTxtDescripcion().getText();
+                double precio=Integer.parseInt(vgp.getjTxtPrecio().getText());
+                int stock=Integer.parseInt(vgp.getjTxtStock().getText());
                 Categorias rubro=(Categorias)vgp.getjCBxRubro().getSelectedItem();
-                ControladorMenuPrincipal.listaProductos.add(new Productos(codigo, descripcion, precio, stock, rubro));
+                            
+                  ControladorMenuPrincipal.listaProductos.add(new Productos(codigo, descripcion, precio, stock, rubro));
                 
-                resetBtn(false);
-                EventoReset();
+                 resetBtn(false);
+                  EventoReset();
+                  cargarTabla();
                 
                 
               }else{
@@ -127,6 +129,7 @@ public class ControladorGestionProducto {
       
     public static void EventoReset(){
           ControladorMenuPrincipal.resetFormContent(vgp.getjPnltxt());
+          vgp.getjCBxRubro().setSelectedIndex(0);
       }
       
    

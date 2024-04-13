@@ -119,6 +119,11 @@ public class VistaGestionProducto extends javax.swing.JInternalFrame {
         jTxtDescripcion.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
 
         jTxtStock.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jTxtStock.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTxtStockKeyTyped(evt);
+            }
+        });
 
         jBtnBuscar.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jBtnBuscar.setText("Buscar");
@@ -315,6 +320,10 @@ public class VistaGestionProducto extends javax.swing.JInternalFrame {
     private void jTxtPrecioKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTxtPrecioKeyTyped
        controlador.ControladorMenuPrincipal.EventoPrecioKeyType(evt,jTxtPrecio.getText());
     }//GEN-LAST:event_jTxtPrecioKeyTyped
+
+    private void jTxtStockKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTxtStockKeyTyped
+      controlador.ControladorMenuPrincipal.EventoSoloNumerico(evt);
+    }//GEN-LAST:event_jTxtStockKeyTyped
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
