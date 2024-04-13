@@ -71,8 +71,8 @@ public class ControladorLogin {
 
     }
     private static void promptTxt() {
-       ControladorMenuPrincipal.textPrompt(lv.getjTxtUser(), "Ingrese su Usaurio");
-       ControladorMenuPrincipal.textPrompt(lv.getjTxtClave(), "Ingrese su clave");
+       ControladorMenuPrincipal.textPrompt(lv.getjTxtUser(), "Ingrese su Usuario");
+       ControladorMenuPrincipal.textPrompt(lv.getjTxtClave(), "Ingrese su Clave");
 
     }
     
