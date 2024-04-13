@@ -1,6 +1,6 @@
 package controlador;
 
-import static controlador.ControladorGestionProducto.vgp;
+
 import java.awt.Component;
 import java.util.TreeSet;
 import javax.swing.JInternalFrame;
@@ -15,7 +15,6 @@ import modelo.EscritorioPersonalizado;
 import modelo.Productos;
 import vista.VistaMenuPrincipal;
 import java.awt.Font;
-import java.awt.TextField;
 import java.awt.event.KeyEvent;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
