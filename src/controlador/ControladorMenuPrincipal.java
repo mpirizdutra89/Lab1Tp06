@@ -16,9 +16,11 @@ import modelo.Productos;
 import vista.VistaMenuPrincipal;
 import java.awt.Font;
 import java.awt.event.KeyEvent;
+
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+import vista.VistasInformacion;
 
 /**
  *
@@ -30,22 +32,27 @@ public class ControladorMenuPrincipal {
     public static VistaMenuPrincipal vmp = new VistaMenuPrincipal();
     public static final EscritorioPersonalizado escritorio = new EscritorioPersonalizado();
     public static TreeSet<Productos> listaProductos;
+    private static  String nombreUsuario;
+  
     // Tablas
     public static DefaultTableModel modeloTable;
     private static DefaultTableCellRenderer rightRenderer = new DefaultTableCellRenderer();
     private static DefaultTableCellRenderer centerRenderer = new DefaultTableCellRenderer();
 
-    public static void CargarVistaPrincipal() {
+    public static void CargarVistaPrincipal(String nombreUser) {
+        nombreUsuario = nombreUser;
         listaProductos = new TreeSet<>();
-       
 
         vmp.setContentPane(escritorio);
+        
         vmp.setLocationRelativeTo(null);
         vmp.setExtendedState(JFrame.MAXIMIZED_BOTH);
         vmp.setVisible(true);
-       
+
         cargaAutomaticaListaProducto();
     }
+    
+ 
 
     public static void jMenuItemProducto() {
 
@@ -105,6 +112,11 @@ public class ControladorMenuPrincipal {
         alinearCabeceras(3, "center", cr.getjTableRubro());
         cargarVistasInternas(cr);
 
+    }
+    
+    public static void jMenuInformacion(){
+        vista.VistasInformacion vi=new VistasInformacion();
+         cargarVistasInternas(vi);
     }
 
     // Funciones para tablas

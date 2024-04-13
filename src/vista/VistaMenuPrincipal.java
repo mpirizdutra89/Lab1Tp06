@@ -14,7 +14,7 @@ public class VistaMenuPrincipal extends javax.swing.JFrame {
      */
     public VistaMenuPrincipal() {
         initComponents();
-        setIconImage(new ImageIcon(getClass().getResource("/resources/imgs/logo48.png")).getImage());
+        setIconImage(new ImageIcon(getClass().getResource("/resources/icons/logo48.png")).getImage());
     }
 
     /**
@@ -33,6 +33,8 @@ public class VistaMenuPrincipal extends javax.swing.JFrame {
         jMiRubro = new javax.swing.JMenuItem();
         jMiNombre = new javax.swing.JMenuItem();
         jMiPrecio = new javax.swing.JMenuItem();
+        jMenu3 = new javax.swing.JMenu();
+        jMenuItemInformacion = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(1024, 800));
@@ -77,6 +79,18 @@ public class VistaMenuPrincipal extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu2);
 
+        jMenu3.setText("Ayuda");
+
+        jMenuItemInformacion.setText("Informacion");
+        jMenuItemInformacion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemInformacionActionPerformed(evt);
+            }
+        });
+        jMenu3.add(jMenuItemInformacion);
+
+        jMenuBar1.add(jMenu3);
+
         setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -109,6 +123,10 @@ public class VistaMenuPrincipal extends javax.swing.JFrame {
        controlador.ControladorMenuPrincipal.jMenuItemPrecio();
     }//GEN-LAST:event_jMiPrecioActionPerformed
 
+    private void jMenuItemInformacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemInformacionActionPerformed
+       controlador.ControladorMenuPrincipal.jMenuInformacion();
+    }//GEN-LAST:event_jMenuItemInformacionActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -124,7 +142,9 @@ public class VistaMenuPrincipal extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenu jMenu3;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItemInformacion;
     private javax.swing.JMenuItem jMiNombre;
     private javax.swing.JMenuItem jMiPrecio;
     private javax.swing.JMenuItem jMiProductos;
