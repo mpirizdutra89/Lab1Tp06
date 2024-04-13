@@ -230,14 +230,33 @@ public class ControladorMenuPrincipal {
         return res;
     }
 
+    public void resetComboBox() {
+
+    }
+    
+       public static void validarEntradaNumerica(javax.swing.JTextField textField) {
+        textField.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                char c = evt.getKeyChar();
+                String text = textField.getText();
+                
+                boolean puntoExistente = text.contains(".");
+                
+                if (!((c >= '0' && c <= '9') || (c == '.' && !puntoExistente) || c == KeyEvent.VK_BACK_SPACE || c == KeyEvent.VK_DELETE)) {
+                    evt.consume();
+                }
+            }
+        });
+    }
+   
   
 
     public static void EventoSoloNumerico(java.awt.event.KeyEvent e) {
-        char c = e.getKeyChar();
-        if (!Character.isDigit(c)) {
-            e.consume(); // Consumir el evento para evitar que se ingrese el carácter
-        }
+    char c = e.getKeyChar();
 
+    if (!Character.isDigit(c) && c != '.' || c == ',') {
+        e.consume();
+    }
     }
 
     public static boolean EventoValidarNumericos(String cadena) {

@@ -12,7 +12,9 @@ public class ControladorCosultaPrecio {
      public static VistaConsultaPrecio vcp = new VistaConsultaPrecio();
      
       public static void CargarInstancia(VistaConsultaPrecio cp) {
-           vcp = cp;
+           vcp = cp;       
+           ControladorMenuPrincipal.validarEntradaNumerica(vcp.getTxtPrecioMin());
+           ControladorMenuPrincipal.validarEntradaNumerica(vcp.getTxtPrecioMax());
            ControladorMenuPrincipal.EventoValidarNumericos(vcp.getTxtPrecioMin().getText());
            ControladorMenuPrincipal.EventoValidarNumericos(vcp.getTxtPrecioMax().getText());
            promptTxt();
@@ -21,22 +23,7 @@ public class ControladorCosultaPrecio {
        private static void promptTxt() {
         ControladorMenuPrincipal.textPrompt(vcp.getTxtPrecioMin(), "Precio mín");
         ControladorMenuPrincipal.textPrompt(vcp.getTxtPrecioMax(), "Precio máx");
-    }
-       
-//       private static void validarEntradaNumerica(javax.swing.JTextField textField) {
-//        textField.addKeyListener(new java.awt.event.KeyAdapter() {
-//            public void keyTyped(java.awt.event.KeyEvent evt) {
-//                char c = evt.getKeyChar();
-//                String text = textField.getText();
-//                
-//                boolean puntoExistente = text.contains(".");
-//                
-//                if (!((c >= '0' && c <= '9') || (c == '.' && !puntoExistente) || c == KeyEvent.VK_BACK_SPACE || c == KeyEvent.VK_DELETE)) {
-//                    evt.consume();
-//                }
-//            }
-//        });
-//    }
+        }
        
        public static void buscarProductosPorPrecio(){
            
