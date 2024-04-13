@@ -16,6 +16,7 @@ import modelo.Productos;
 import vista.VistaMenuPrincipal;
 import java.awt.Font;
 import java.awt.event.KeyEvent;
+import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
@@ -36,10 +37,11 @@ public class ControladorMenuPrincipal {
 
     public static void CargarVistaPrincipal() {
         listaProductos = new TreeSet<>();
-        escritorio.setSize(1024, 768);
+       
 
         vmp.setContentPane(escritorio);
         vmp.setLocationRelativeTo(null);
+        vmp.setExtendedState(JFrame.MAXIMIZED_BOTH);
         vmp.setVisible(true);
        
         cargaAutomaticaListaProducto();
