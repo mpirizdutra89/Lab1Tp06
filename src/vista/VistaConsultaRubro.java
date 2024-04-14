@@ -40,6 +40,7 @@ public class VistaConsultaRubro extends javax.swing.JInternalFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         jTableRubro = new javax.swing.JTable();
 
+        setBackground(new java.awt.Color(243, 239, 224));
         setClosable(true);
         setIconifiable(true);
         setTitle("Rubro");
