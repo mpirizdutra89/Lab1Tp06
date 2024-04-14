@@ -60,21 +60,21 @@ public class VistaGestionProducto extends javax.swing.JInternalFrame {
         jBtnReset = new javax.swing.JButton();
         jBtnSalir = new javax.swing.JButton();
 
-        setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(243, 239, 224));
         setIconifiable(true);
         setTitle("Gestion producto");
         setFrameIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/icons/scaneer.png"))); // NOI18N
         setPreferredSize(new java.awt.Dimension(790, 650));
 
-        jPnlContenedor.setBackground(new java.awt.Color(255, 255, 255));
+        jPnlContenedor.setBackground(new java.awt.Color(243, 239, 224));
 
-        jPnlTable.setBackground(new java.awt.Color(255, 255, 255));
+        jPnlTable.setBackground(new java.awt.Color(243, 239, 224));
         jPnlTable.setFocusable(false);
 
         jScrollPane1.setBackground(new java.awt.Color(255, 255, 255));
         jScrollPane1.setFocusable(false);
 
-        jTblDatos.setBackground(new java.awt.Color(255, 255, 255));
+        jTblDatos.setBackground(new java.awt.Color(243, 239, 224));
         jTblDatos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -111,13 +111,12 @@ public class VistaGestionProducto extends javax.swing.JInternalFrame {
                 .addContainerGap(15, Short.MAX_VALUE))
         );
 
-        jPnltxt.setBackground(new java.awt.Color(255, 255, 255));
+        jPnltxt.setBackground(new java.awt.Color(243, 239, 224));
 
-        jCBxRubro.setBackground(new java.awt.Color(255, 255, 255));
+        jCBxRubro.setFont(new java.awt.Font("Consolas", 1, 17)); // NOI18N
         jCBxRubro.setNextFocusableComponent(jBtnNuevo);
 
-        jTxtPrecio.setBackground(new java.awt.Color(255, 255, 255));
-        jTxtPrecio.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jTxtPrecio.setFont(new java.awt.Font("Consolas", 1, 18)); // NOI18N
         jTxtPrecio.setNextFocusableComponent(jTxtStock);
         jTxtPrecio.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
@@ -125,8 +124,7 @@ public class VistaGestionProducto extends javax.swing.JInternalFrame {
             }
         });
 
-        jTxtcodigo.setBackground(new java.awt.Color(255, 255, 255));
-        jTxtcodigo.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jTxtcodigo.setFont(new java.awt.Font("Consolas", 1, 18)); // NOI18N
         jTxtcodigo.setNextFocusableComponent(jTxtDescripcion);
         jTxtcodigo.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
@@ -134,12 +132,10 @@ public class VistaGestionProducto extends javax.swing.JInternalFrame {
             }
         });
 
-        jTxtDescripcion.setBackground(new java.awt.Color(255, 255, 255));
-        jTxtDescripcion.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jTxtDescripcion.setFont(new java.awt.Font("Consolas", 1, 18)); // NOI18N
         jTxtDescripcion.setNextFocusableComponent(jTxtPrecio);
 
-        jTxtStock.setBackground(new java.awt.Color(255, 255, 255));
-        jTxtStock.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jTxtStock.setFont(new java.awt.Font("Consolas", 1, 18)); // NOI18N
         jTxtStock.setNextFocusableComponent(jCBxRubro);
         jTxtStock.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
@@ -147,9 +143,8 @@ public class VistaGestionProducto extends javax.swing.JInternalFrame {
             }
         });
 
-        jBtnBuscar.setBackground(new java.awt.Color(255, 255, 255));
+        jBtnBuscar.setBackground(new java.awt.Color(243, 239, 224));
         jBtnBuscar.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        jBtnBuscar.setForeground(new java.awt.Color(0, 0, 0));
         jBtnBuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/icons/search2-64.png"))); // NOI18N
         jBtnBuscar.setBorder(null);
         jBtnBuscar.setFocusPainted(false);
@@ -198,11 +193,10 @@ public class VistaGestionProducto extends javax.swing.JInternalFrame {
                 .addContainerGap(17, Short.MAX_VALUE))
         );
 
-        jPnlBotones.setBackground(new java.awt.Color(255, 255, 255));
+        jPnlBotones.setBackground(new java.awt.Color(243, 239, 224));
 
-        jBtnNuevo.setBackground(new java.awt.Color(255, 255, 255));
+        jBtnNuevo.setBackground(new java.awt.Color(243, 239, 224));
         jBtnNuevo.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        jBtnNuevo.setForeground(new java.awt.Color(0, 0, 0));
         jBtnNuevo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/icons/new64.png"))); // NOI18N
         jBtnNuevo.setToolTipText("Agregar Producto");
         jBtnNuevo.setBorder(null);
@@ -213,9 +207,8 @@ public class VistaGestionProducto extends javax.swing.JInternalFrame {
             }
         });
 
-        jBtnEditar.setBackground(new java.awt.Color(255, 255, 255));
+        jBtnEditar.setBackground(new java.awt.Color(243, 239, 224));
         jBtnEditar.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        jBtnEditar.setForeground(new java.awt.Color(0, 0, 0));
         jBtnEditar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/icons/save64.png"))); // NOI18N
         jBtnEditar.setToolTipText("Editar");
         jBtnEditar.setBorder(null);
@@ -226,9 +219,8 @@ public class VistaGestionProducto extends javax.swing.JInternalFrame {
             }
         });
 
-        jBtnEliminar.setBackground(new java.awt.Color(255, 255, 255));
+        jBtnEliminar.setBackground(new java.awt.Color(243, 239, 224));
         jBtnEliminar.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        jBtnEliminar.setForeground(new java.awt.Color(0, 0, 0));
         jBtnEliminar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/icons/clear64.png"))); // NOI18N
         jBtnEliminar.setBorder(null);
         jBtnEliminar.setFocusPainted(false);
@@ -238,9 +230,8 @@ public class VistaGestionProducto extends javax.swing.JInternalFrame {
             }
         });
 
-        jBtnReset.setBackground(new java.awt.Color(255, 255, 255));
+        jBtnReset.setBackground(new java.awt.Color(243, 239, 224));
         jBtnReset.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        jBtnReset.setForeground(new java.awt.Color(0, 0, 0));
         jBtnReset.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/icons/reset.png"))); // NOI18N
         jBtnReset.setToolTipText("Resetear");
         jBtnReset.setBorder(null);
@@ -251,9 +242,8 @@ public class VistaGestionProducto extends javax.swing.JInternalFrame {
             }
         });
 
-        jBtnSalir.setBackground(new java.awt.Color(255, 255, 255));
+        jBtnSalir.setBackground(new java.awt.Color(243, 239, 224));
         jBtnSalir.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        jBtnSalir.setForeground(new java.awt.Color(0, 0, 0));
         jBtnSalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/icons/log_logout_door_1563.png"))); // NOI18N
         jBtnSalir.setText("Salir");
         jBtnSalir.setBorder(null);
