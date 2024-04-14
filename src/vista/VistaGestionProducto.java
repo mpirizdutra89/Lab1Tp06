@@ -25,12 +25,12 @@ public class VistaGestionProducto extends javax.swing.JInternalFrame {
     public VistaGestionProducto() {
         initComponents();
         controlador.ControladorGestionProducto.CargarInstancia(this);
-           Component focusOwner = KeyboardFocusManager.getCurrentKeyboardFocusManager().getFocusOwner();
-        if (focusOwner != null) {
-            System.out.println("El componente con el foco es: " + focusOwner.getClass().getName());
-        } else {
-            System.out.println("Ningún componente tiene el foco.");
-        }
+//           Component focusOwner = KeyboardFocusManager.getCurrentKeyboardFocusManager().getFocusOwner();
+//        if (focusOwner != null) {
+//            System.out.println("El componente con el foco es: " + focusOwner.getClass().getName());
+//        } else {
+//            System.out.println("Ningún componente tiene el foco.");
+//        }
     }
 
     /**

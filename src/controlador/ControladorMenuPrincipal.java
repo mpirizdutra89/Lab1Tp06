@@ -22,6 +22,7 @@ import java.awt.event.KeyEvent;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+import vista.VistaGestionProducto;
 import vista.VistasInformacion;
 
 /**
@@ -72,7 +73,7 @@ public class ControladorMenuPrincipal {
 
     public static void jMenuItemProducto() {
 
-        vista.VistaGestionProducto vgp = new vista.VistaGestionProducto();
+        vista.VistaGestionProducto vgp=new VistaGestionProducto();
 
         for (Categorias rubro : Categorias.values()) {
             vgp.getjCBxRubro().addItem(rubro);
