@@ -16,7 +16,7 @@ public class EscritorioPersonalizado extends JDesktopPane {
     public EscritorioPersonalizado() {
         try {
             //System.out.println(getClass().getResourceAsStream("/main/resources/imgs/fondo1.jpg"));
-            img = ImageIO.read(getClass().getResourceAsStream("/resources/imgs/fondo4.jpg"));
+            img = ImageIO.read(getClass().getResourceAsStream("/resources/imgs/fontdoConlogo.png"));
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -29,5 +29,8 @@ public class EscritorioPersonalizado extends JDesktopPane {
         // g.drawImage(img, 0, 0,600,800,null);
         g.drawImage(img, 0, 0,null);
     }
+    
+    
+    
 
 }

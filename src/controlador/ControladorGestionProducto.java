@@ -18,6 +18,9 @@ public class ControladorGestionProducto {
         vgp = vgp2;
         promptTxt();
         resetBtn(false);
+       
+         vgp.getjTxtcodigo().setFocusable(true);
+         vgp.getjTxtcodigo().requestFocus();
     }
       
       public static void EventojBtnNuevo(){
@@ -38,6 +41,8 @@ public class ControladorGestionProducto {
                 
               }else{
                   ControladorMenuPrincipal.viewDialogo("Todo los campos son obligatorios. Respete el tipo de dato y su formato.", 0);
+                    vgp.getjTxtcodigo().setFocusable(true);
+                    vgp.getjTxtcodigo().requestFocus();
               }
               
           } catch (Exception e) {
@@ -85,6 +90,10 @@ public class ControladorGestionProducto {
 
         }
     }
+    
+    public static void EventjBtnSalir(){
+        vgp.dispose();
+    }
 
     public static void EventojBtnBuscar() {
         try {
@@ -128,8 +137,10 @@ public class ControladorGestionProducto {
   
       
     public static void EventoReset(){
+          resetBtn(false);
           ControladorMenuPrincipal.resetFormContent(vgp.getjPnltxt());
           vgp.getjCBxRubro().setSelectedIndex(0);
+          productoActual=null;
       }
       
    
@@ -139,6 +150,7 @@ public class ControladorGestionProducto {
         ControladorMenuPrincipal.textPrompt(vgp.getjTxtDescripcion(), "Descripcion producto");
         ControladorMenuPrincipal.textPrompt(vgp.getjTxtPrecio(), "Precio - 100.00");
         ControladorMenuPrincipal.textPrompt(vgp.getjTxtStock(), "Stock");
+       
     }
     
     
@@ -199,6 +211,7 @@ public class ControladorGestionProducto {
             vgp.getjBtnEliminar().setEnabled(true);
             vgp.getjBtnNuevo().setEnabled(false);
         }
+        
     }
     
     private static void msjGeneral(){

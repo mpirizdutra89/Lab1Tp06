@@ -16,8 +16,13 @@ import modelo.Productos;
 import vista.VistaMenuPrincipal;
 import java.awt.Font;
 import java.awt.event.KeyEvent;
+
+
+
+import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+import vista.VistasInformacion;
 
 /**
  *
@@ -29,21 +34,41 @@ public class ControladorMenuPrincipal {
     public static VistaMenuPrincipal vmp = new VistaMenuPrincipal();
     public static final EscritorioPersonalizado escritorio = new EscritorioPersonalizado();
     public static TreeSet<Productos> listaProductos;
+    private static  String nombreUsuario;
+  
     // Tablas
     public static DefaultTableModel modeloTable;
     private static DefaultTableCellRenderer rightRenderer = new DefaultTableCellRenderer();
     private static DefaultTableCellRenderer centerRenderer = new DefaultTableCellRenderer();
 
-    public static void CargarVistaPrincipal() {
+    public static void CargarVistaPrincipal(String nombreUser) {
+        nombreUsuario = nombreUser;
         listaProductos = new TreeSet<>();
-        escritorio.setSize(1024, 768);
 
         vmp.setContentPane(escritorio);
+
         vmp.setLocationRelativeTo(null);
-        vmp.setVisible(true);
+        vmp.setExtendedState(JFrame.MAXIMIZED_BOTH);
+
+        vmp.setTitle("Bienvenido al sistema " + nameMsj(nombreUser));
        
+        vmp.setVisible(true);
+
         cargaAutomaticaListaProducto();
     }
+    
+    
+    
+ private static String nameMsj(String usuario){
+     if(usuario.equals("luis")|| usuario.equals("juan")){
+          usuario="Profesor "+usuario.toUpperCase().charAt(0) + usuario.substring(1, usuario.length()).toLowerCase();
+        
+     }else{
+           usuario=usuario.toUpperCase().charAt(0) + usuario.substring(1, usuario.length()).toLowerCase();
+        
+     }
+     return usuario;
+ }
 
     public static void jMenuItemProducto() {
 
@@ -103,6 +128,11 @@ public class ControladorMenuPrincipal {
         alinearCabeceras(3, "center", cr.getjTableRubro());
         cargarVistasInternas(cr);
 
+    }
+    
+    public static void jMenuInformacion(){
+        vista.VistasInformacion vi=new VistasInformacion();
+         cargarVistasInternas(vi);
     }
 
     // Funciones para tablas
@@ -296,6 +326,8 @@ public class ControladorMenuPrincipal {
         
         
     }
+    
+    
 
     // fin
 }

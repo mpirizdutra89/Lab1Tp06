@@ -1,7 +1,10 @@
 
 package vista;
 
+
+
 import javax.swing.ImageIcon;
+import javax.swing.JMenuItem;
 
 /**
  *
@@ -14,9 +17,10 @@ public class VistaMenuPrincipal extends javax.swing.JFrame {
      */
     public VistaMenuPrincipal() {
         initComponents();
-//        setIconImage(new ImageIcon(getClass().getResource("src/resources/imgs/logo2.png")).getImage());
+        setIconImage(new ImageIcon(getClass().getResource("/resources/icons/logoSuper.png")).getImage());
     }
-
+    
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -33,12 +37,16 @@ public class VistaMenuPrincipal extends javax.swing.JFrame {
         jMiRubro = new javax.swing.JMenuItem();
         jMiNombre = new javax.swing.JMenuItem();
         jMiPrecio = new javax.swing.JMenuItem();
+        jMenu3 = new javax.swing.JMenu();
+        jMenuItemInformacion = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(1024, 800));
 
         jMenu1.setText("Administracion");
+        jMenu1.setFont(new java.awt.Font("Consolas", 1, 14)); // NOI18N
 
+        jMiProductos.setFont(new java.awt.Font("Consolas", 1, 14)); // NOI18N
         jMiProductos.setText("Productos");
         jMiProductos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -50,7 +58,9 @@ public class VistaMenuPrincipal extends javax.swing.JFrame {
         jMenuBar1.add(jMenu1);
 
         jMenu2.setText("Consultas");
+        jMenu2.setFont(new java.awt.Font("Consolas", 1, 14)); // NOI18N
 
+        jMiRubro.setFont(new java.awt.Font("Consolas", 1, 14)); // NOI18N
         jMiRubro.setText("Por Rubro");
         jMiRubro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -59,6 +69,7 @@ public class VistaMenuPrincipal extends javax.swing.JFrame {
         });
         jMenu2.add(jMiRubro);
 
+        jMiNombre.setFont(new java.awt.Font("Consolas", 1, 14)); // NOI18N
         jMiNombre.setText("Por Nombre");
         jMiNombre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -67,6 +78,7 @@ public class VistaMenuPrincipal extends javax.swing.JFrame {
         });
         jMenu2.add(jMiNombre);
 
+        jMiPrecio.setFont(new java.awt.Font("Consolas", 1, 14)); // NOI18N
         jMiPrecio.setText("Por Precio");
         jMiPrecio.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -76,6 +88,20 @@ public class VistaMenuPrincipal extends javax.swing.JFrame {
         jMenu2.add(jMiPrecio);
 
         jMenuBar1.add(jMenu2);
+
+        jMenu3.setText("Ayuda");
+        jMenu3.setFont(new java.awt.Font("Consolas", 1, 14)); // NOI18N
+
+        jMenuItemInformacion.setFont(new java.awt.Font("Consolas", 1, 14)); // NOI18N
+        jMenuItemInformacion.setText("Informacion");
+        jMenuItemInformacion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemInformacionActionPerformed(evt);
+            }
+        });
+        jMenu3.add(jMenuItemInformacion);
+
+        jMenuBar1.add(jMenu3);
 
         setJMenuBar(jMenuBar1);
 
@@ -87,7 +113,7 @@ public class VistaMenuPrincipal extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 519, Short.MAX_VALUE)
+            .addGap(0, 517, Short.MAX_VALUE)
         );
 
         pack();
@@ -109,25 +135,28 @@ public class VistaMenuPrincipal extends javax.swing.JFrame {
        controlador.ControladorMenuPrincipal.jMenuItemPrecio();
     }//GEN-LAST:event_jMiPrecioActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
-    /*public static void main(String args[]) {
-       
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new VistaMenuPrincipal().setVisible(true);
-            }
-        });
-    }*/
+    private void jMenuItemInformacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemInformacionActionPerformed
+       controlador.ControladorMenuPrincipal.jMenuInformacion();
+    }//GEN-LAST:event_jMenuItemInformacionActionPerformed
+
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenu jMenu3;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItemInformacion;
     private javax.swing.JMenuItem jMiNombre;
     private javax.swing.JMenuItem jMiPrecio;
     private javax.swing.JMenuItem jMiProductos;
     private javax.swing.JMenuItem jMiRubro;
     // End of variables declaration//GEN-END:variables
+
+    public JMenuItem getjMiProductos() {
+        return jMiProductos;
+    }
+
+
+    
 }
