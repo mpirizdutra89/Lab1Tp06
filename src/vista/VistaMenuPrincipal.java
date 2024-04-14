@@ -17,12 +17,7 @@ public class VistaMenuPrincipal extends javax.swing.JFrame {
      */
     public VistaMenuPrincipal() {
         initComponents();
-<<<<<<< Updated upstream
-        setIconImage(new ImageIcon(getClass().getResource("/resources/icons/logo48.png")).getImage());
-        
-=======
         setIconImage(new ImageIcon(getClass().getResource("/resources/icons/logoSuper.png")).getImage());
->>>>>>> Stashed changes
     }
     
     
