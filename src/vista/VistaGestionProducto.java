@@ -113,10 +113,12 @@ public class VistaGestionProducto extends javax.swing.JInternalFrame {
 
         jPnltxt.setBackground(new java.awt.Color(243, 239, 224));
 
-        jCBxRubro.setFont(new java.awt.Font("Consolas", 1, 17)); // NOI18N
+        jCBxRubro.setFont(new java.awt.Font("Consolas", 2, 17)); // NOI18N
+        jCBxRubro.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(97, 183, 144), 2, true));
         jCBxRubro.setNextFocusableComponent(jBtnNuevo);
 
         jTxtPrecio.setFont(new java.awt.Font("Consolas", 1, 18)); // NOI18N
+        jTxtPrecio.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(97, 183, 144), 2, true));
         jTxtPrecio.setNextFocusableComponent(jTxtStock);
         jTxtPrecio.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
@@ -125,6 +127,7 @@ public class VistaGestionProducto extends javax.swing.JInternalFrame {
         });
 
         jTxtcodigo.setFont(new java.awt.Font("Consolas", 1, 18)); // NOI18N
+        jTxtcodigo.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(97, 183, 144), 2, true));
         jTxtcodigo.setNextFocusableComponent(jTxtDescripcion);
         jTxtcodigo.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
@@ -133,9 +136,11 @@ public class VistaGestionProducto extends javax.swing.JInternalFrame {
         });
 
         jTxtDescripcion.setFont(new java.awt.Font("Consolas", 1, 18)); // NOI18N
+        jTxtDescripcion.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(97, 183, 144), 2, true));
         jTxtDescripcion.setNextFocusableComponent(jTxtPrecio);
 
         jTxtStock.setFont(new java.awt.Font("Consolas", 1, 18)); // NOI18N
+        jTxtStock.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(97, 183, 144), 2, true));
         jTxtStock.setNextFocusableComponent(jCBxRubro);
         jTxtStock.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
