@@ -86,6 +86,7 @@ public class VistaGestionProducto extends javax.swing.JInternalFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
+        jTblDatos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jTblDatos.setFocusable(false);
         jTblDatos.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -152,6 +153,7 @@ public class VistaGestionProducto extends javax.swing.JInternalFrame {
         jBtnBuscar.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jBtnBuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/icons/search2-64.png"))); // NOI18N
         jBtnBuscar.setBorder(null);
+        jBtnBuscar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jBtnBuscar.setFocusPainted(false);
         jBtnBuscar.setNextFocusableComponent(jBtnReset);
         jBtnBuscar.addActionListener(new java.awt.event.ActionListener() {
@@ -205,6 +207,7 @@ public class VistaGestionProducto extends javax.swing.JInternalFrame {
         jBtnNuevo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/icons/new64.png"))); // NOI18N
         jBtnNuevo.setToolTipText("Agregar Producto");
         jBtnNuevo.setBorder(null);
+        jBtnNuevo.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jBtnNuevo.setFocusPainted(false);
         jBtnNuevo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -217,6 +220,7 @@ public class VistaGestionProducto extends javax.swing.JInternalFrame {
         jBtnEditar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/icons/save64.png"))); // NOI18N
         jBtnEditar.setToolTipText("Editar");
         jBtnEditar.setBorder(null);
+        jBtnEditar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jBtnEditar.setFocusPainted(false);
         jBtnEditar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -228,6 +232,7 @@ public class VistaGestionProducto extends javax.swing.JInternalFrame {
         jBtnEliminar.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jBtnEliminar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/icons/clear64.png"))); // NOI18N
         jBtnEliminar.setBorder(null);
+        jBtnEliminar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jBtnEliminar.setFocusPainted(false);
         jBtnEliminar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -240,6 +245,7 @@ public class VistaGestionProducto extends javax.swing.JInternalFrame {
         jBtnReset.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/icons/reset.png"))); // NOI18N
         jBtnReset.setToolTipText("Resetear");
         jBtnReset.setBorder(null);
+        jBtnReset.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jBtnReset.setFocusPainted(false);
         jBtnReset.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -252,6 +258,7 @@ public class VistaGestionProducto extends javax.swing.JInternalFrame {
         jBtnSalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/icons/log_logout_door_1563.png"))); // NOI18N
         jBtnSalir.setText("Salir");
         jBtnSalir.setBorder(null);
+        jBtnSalir.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jBtnSalir.setFocusPainted(false);
         jBtnSalir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
