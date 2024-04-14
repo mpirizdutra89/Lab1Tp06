@@ -71,6 +71,7 @@ public class VistaConsultaPrecio extends javax.swing.JInternalFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
 
+        setBackground(new java.awt.Color(243, 239, 224));
         setClosable(true);
         setIconifiable(true);
         setTitle("Consulta por Precio");

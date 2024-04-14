@@ -31,6 +31,8 @@ public class VistaLogin extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jEditorPane1 = new javax.swing.JEditorPane();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLblIconLogin = new javax.swing.JLabel();
@@ -43,6 +45,8 @@ public class VistaLogin extends javax.swing.JFrame {
         jSeparator2 = new javax.swing.JSeparator();
         jTxtClave = new javax.swing.JPasswordField();
         jBtnLogin = new javax.swing.JButton();
+
+        jScrollPane1.setViewportView(jEditorPane1);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Credenciales");
@@ -67,37 +71,39 @@ public class VistaLogin extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(25, 25, 25)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(49, 49, 49)
+                        .addComponent(jLblIconLogin))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(24, 24, 24)
-                        .addComponent(jLblIconLogin)))
-                .addContainerGap(25, Short.MAX_VALUE))
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(26, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(45, 45, 45)
+                .addContainerGap(66, Short.MAX_VALUE)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 77, Short.MAX_VALUE)
+                .addGap(43, 43, 43)
                 .addComponent(jLblIconLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(66, 66, 66))
+                .addGap(79, 79, 79))
         );
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 230, 430));
 
-        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel2.setBackground(new java.awt.Color(243, 239, 224));
 
-        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED), "Datos del Usuario"));
+        jPanel3.setBackground(new java.awt.Color(243, 239, 224));
+        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(0, 0, 0), null, null), "Datos del Usuario", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Consolas", 0, 12), new java.awt.Color(0, 0, 0))); // NOI18N
+        jPanel3.setForeground(new java.awt.Color(0, 0, 0));
         jPanel3.setToolTipText("");
-        jPanel3.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        jPanel3.setFont(new java.awt.Font("Consolas", 1, 14)); // NOI18N
 
         jLblIconoEmail.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/icons/email.png"))); // NOI18N
 
-        jTxtUser.setBackground(new java.awt.Color(255, 255, 255));
-        jTxtUser.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        jTxtUser.setBackground(new java.awt.Color(243, 239, 224));
+        jTxtUser.setFont(new java.awt.Font("Consolas", 1, 14)); // NOI18N
         jTxtUser.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         jTxtUser.setBorder(null);
         jTxtUser.addActionListener(new java.awt.event.ActionListener() {
@@ -114,8 +120,8 @@ public class VistaLogin extends javax.swing.JFrame {
         jSeparator2.setBackground(new java.awt.Color(255, 255, 255));
         jSeparator2.setForeground(new java.awt.Color(0, 0, 0));
 
-        jTxtClave.setBackground(new java.awt.Color(255, 255, 255));
-        jTxtClave.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        jTxtClave.setBackground(new java.awt.Color(243, 239, 224));
+        jTxtClave.setFont(new java.awt.Font("Consolas", 1, 14)); // NOI18N
         jTxtClave.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         jTxtClave.setBorder(null);
         jTxtClave.setNextFocusableComponent(jBtnLogin);
@@ -165,9 +171,10 @@ public class VistaLogin extends javax.swing.JFrame {
         );
 
         jBtnLogin.setBackground(new java.awt.Color(0, 0, 0));
-        jBtnLogin.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
+        jBtnLogin.setFont(new java.awt.Font("Consolas", 1, 18)); // NOI18N
         jBtnLogin.setForeground(new java.awt.Color(255, 255, 255));
         jBtnLogin.setText("REGISTRARSE");
+        jBtnLogin.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
         jBtnLogin.setFocusPainted(false);
         jBtnLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -191,9 +198,9 @@ public class VistaLogin extends javax.swing.JFrame {
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(89, Short.MAX_VALUE)
+                .addContainerGap(76, Short.MAX_VALUE)
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(26, 26, 26)
+                .addGap(40, 40, 40)
                 .addComponent(jBtnLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(76, 76, 76))
         );
@@ -221,6 +228,7 @@ public class VistaLogin extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jBtnLogin;
+    private javax.swing.JEditorPane jEditorPane1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLblIconCandado;
     private javax.swing.JLabel jLblIconLogin;
@@ -228,6 +236,7 @@ public class VistaLogin extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JPasswordField jTxtClave;
