@@ -8,6 +8,9 @@
     <Property name="closable" type="boolean" value="true"/>
     <Property name="iconifiable" type="boolean" value="true"/>
     <Property name="title" type="java.lang.String" value="Consulta por Precio"/>
+    <Property name="frameIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+      <Image iconType="3" name="/resources/icons/buscar25.png"/>
+    </Property>
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
@@ -38,8 +41,12 @@
           </Group>
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+              <Component id="jLabel1" min="-2" pref="50" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
               <Component id="TxtPrecioMin" min="-2" pref="80" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="jLabel2" min="-2" pref="20" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="TxtPrecioMax" min="-2" pref="80" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="143" max="-2" attributes="0"/>
           </Group>
@@ -52,8 +59,10 @@
               <Component id="jDesktopPane1" max="32767" attributes="0"/>
               <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="TxtPrecioMax" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="TxtPrecioMin" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="TxtPrecioMax" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
+                  <Component id="TxtPrecioMin" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
+                  <Component id="jLabel1" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
+                  <Component id="jLabel2" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
               <Component id="jScrollPane1" min="-2" pref="231" max="-2" attributes="0"/>
@@ -64,11 +73,29 @@
   </Layout>
   <SubComponents>
     <Component class="javax.swing.JTextField" name="TxtPrecioMin">
+      <Properties>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+            <LineBorder roundedCorners="true" thickness="2">
+              <Color PropertyName="color" blue="90" green="b7" red="61" type="rgb"/>
+            </LineBorder>
+          </Border>
+        </Property>
+      </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="TxtPrecioMinActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="TxtPrecioMax">
+      <Properties>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+            <LineBorder roundedCorners="true" thickness="2">
+              <Color PropertyName="color" blue="90" green="b7" red="61" type="rgb"/>
+            </LineBorder>
+          </Border>
+        </Property>
+      </Properties>
     </Component>
     <Container class="javax.swing.JDesktopPane" name="jDesktopPane1">
 
@@ -133,5 +160,15 @@
         </Component>
       </SubComponents>
     </Container>
+    <Component class="javax.swing.JLabel" name="jLabel1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Entre $:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="  y"/>
+      </Properties>
+    </Component>
   </SubComponents>
 </Form>

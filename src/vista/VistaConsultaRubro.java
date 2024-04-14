@@ -43,8 +43,10 @@ public class VistaConsultaRubro extends javax.swing.JInternalFrame {
         setBackground(new java.awt.Color(243, 239, 224));
         setClosable(true);
         setIconifiable(true);
-        setTitle("Rubro");
+        setTitle("Consulta por Rubro");
+        setFrameIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/icons/buscar25.png"))); // NOI18N
 
+        jCBxRubro.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(97, 183, 144), 2, true));
         jCBxRubro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCBxRubroActionPerformed(evt);
@@ -88,21 +90,21 @@ public class VistaConsultaRubro extends javax.swing.JInternalFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
+                        .addGap(29, 29, 29)
                         .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(116, 116, 116)
+                        .addGap(145, 145, 145)
                         .addComponent(jCBxRubro, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(30, Short.MAX_VALUE))
+                .addContainerGap(33, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(34, 34, 34)
+                .addGap(28, 28, 28)
                 .addComponent(jCBxRubro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(27, Short.MAX_VALUE))
+                .addContainerGap(33, Short.MAX_VALUE))
         );
 
         pack();
