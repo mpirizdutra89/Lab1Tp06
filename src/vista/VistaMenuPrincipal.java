@@ -89,11 +89,11 @@ public class VistaMenuPrincipal extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu2);
 
-        jMenu3.setText("Ayuda");
+        jMenu3.setText("Info");
         jMenu3.setFont(new java.awt.Font("Consolas", 1, 14)); // NOI18N
 
         jMenuItemInformacion.setFont(new java.awt.Font("Consolas", 1, 14)); // NOI18N
-        jMenuItemInformacion.setText("Informacion");
+        jMenuItemInformacion.setText("Informacion del equipo");
         jMenuItemInformacion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItemInformacionActionPerformed(evt);
