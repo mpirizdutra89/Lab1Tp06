@@ -119,10 +119,6 @@ public class VistaMenuPrincipal extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jMiProductosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMiProductosActionPerformed
-         controlador.ControladorMenuPrincipal.jMenuItemProducto();
-    }//GEN-LAST:event_jMiProductosActionPerformed
-
     private void jMiRubroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMiRubroActionPerformed
       controlador.ControladorMenuPrincipal.jMenuItemRubro();
     }//GEN-LAST:event_jMiRubroActionPerformed
@@ -139,6 +135,10 @@ public class VistaMenuPrincipal extends javax.swing.JFrame {
        controlador.ControladorMenuPrincipal.jMenuInformacion();
     }//GEN-LAST:event_jMenuItemInformacionActionPerformed
 
+    private void jMiProductosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMiProductosActionPerformed
+         controlador.ControladorMenuPrincipal.jMenuItemProducto();
+    }//GEN-LAST:event_jMiProductosActionPerformed
+
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -153,9 +153,7 @@ public class VistaMenuPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMiRubro;
     // End of variables declaration//GEN-END:variables
 
-    public JMenuItem getjMiProductos() {
-        return jMiProductos;
-    }
+   
 
 
     
