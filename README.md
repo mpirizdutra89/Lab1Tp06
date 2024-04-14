@@ -26,7 +26,7 @@
         <li>Volver a la raíz del proyecto. Y copiar todo el contenido.</li>
         <li>Ir a la ubicación del repositorio de nombre Lab1Tp06 y dentro pegar y remplazar.</li>
         <li>Borrar el proyecto que se creo antes. (no el repo)</li>
-        <li>Ir al netBeans y buscar el repositorio de nombre Lab1Tp05, que como podrán ver ya lo reconoce como un proyecto.</li>
+        <li>Ir al netBeans y buscar el repositorio de nombre Lab1Tp06, que como podrán ver ya lo reconoce como un proyecto.</li>
         <li>ya podrán  ejecutar y trabajar en el.</li>
     </ul>
 <p>EL proyecto deve ser subido bien para que esto funcione, encaso de que quieran saber como crear el proyecto bien desde cero mirar el  <a href="https://youtu.be/qVdksdzAH5c"> video</a></p>      
