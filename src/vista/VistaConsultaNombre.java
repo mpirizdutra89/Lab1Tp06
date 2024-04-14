@@ -75,6 +75,7 @@ public class VistaConsultaNombre extends javax.swing.JInternalFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
+        jTblDatos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jTblDatos.setGridColor(new java.awt.Color(243, 239, 224));
         jTblDatos.setRowHeight(20);
         jTblDatos.setSelectionBackground(new java.awt.Color(97, 183, 144));

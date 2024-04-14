@@ -110,6 +110,7 @@ public class VistaConsultaPrecio extends javax.swing.JInternalFrame {
                 "Código", "Descripción", "Precio", "Stock"
             }
         ));
+        jTable1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jScrollPane1.setViewportView(jTable1);
 
         jLabel1.setText("Entre $:");

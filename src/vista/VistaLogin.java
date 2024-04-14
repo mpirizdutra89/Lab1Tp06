@@ -172,6 +172,7 @@ public class VistaLogin extends javax.swing.JFrame {
         jBtnLogin.setForeground(new java.awt.Color(255, 255, 255));
         jBtnLogin.setText("INGRESAR");
         jBtnLogin.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
+        jBtnLogin.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jBtnLogin.setFocusPainted(false);
         jBtnLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
