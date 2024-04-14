@@ -29,5 +29,7 @@
         <li>Ir al netBeans y buscar el repositorio de nombre Lab1Tp06, que como podrán ver ya lo reconoce como un proyecto.</li>
         <li>ya podrán  ejecutar y trabajar en el.</li>
     </ul>
-<p>EL proyecto deve ser subido bien para que esto funcione, encaso de que quieran saber como crear el proyecto bien desde cero mirar el  <a href="https://youtu.be/qVdksdzAH5c"> video</a></p>      
+<p>EL proyecto deve ser subido bien para que esto funcione, encaso de que quieran saber como crear el proyecto bien desde cero mirar el  <a href="https://youtu.be/qVdksdzAH5c"> video</a></p>  
+
+<h4>Vercion del apache netbeans 21  . Jdk 21.0.2 LTS</h4>
 
