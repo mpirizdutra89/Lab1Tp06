@@ -14,6 +14,7 @@
     <li>Prfe Luis | user: luis clave: 1234<li/>
     <li>Prfe Juan | user: juan clave: 1234<li/>
 </ul>
+
 <br/>
 <h3>Para poder visualizar el proyecto en net Beans: (intrucciones para los que quieran clonar)</h3>
        <ul>
