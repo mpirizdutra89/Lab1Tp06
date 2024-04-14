@@ -69,7 +69,7 @@ public class VistaGestionProducto extends javax.swing.JInternalFrame {
         jPnlContenedor.setBackground(new java.awt.Color(243, 239, 224));
         jPnlContenedor.setPreferredSize(new java.awt.Dimension(790, 650));
 
-<<<<<<< Updated upstream
+
         jPnlTable.setBackground(new java.awt.Color(255, 255, 255));
         jPnlTable.setFocusable(false);
 
@@ -95,9 +95,9 @@ public class VistaGestionProducto extends javax.swing.JInternalFrame {
             }
         });
         jScrollPane1.setViewportView(jTblDatos);
-=======
+
         jPnlTable.setBackground(new java.awt.Color(243, 239, 224));
->>>>>>> Stashed changes
+
 
         javax.swing.GroupLayout jPnlTableLayout = new javax.swing.GroupLayout(jPnlTable);
         jPnlTable.setLayout(jPnlTableLayout);
@@ -190,7 +190,7 @@ public class VistaGestionProducto extends javax.swing.JInternalFrame {
         jPnltxtLayout.setVerticalGroup(
             jPnltxtLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPnltxtLayout.createSequentialGroup()
-<<<<<<< Updated upstream
+
                 .addGap(5, 5, 5)
                 .addGroup(jPnltxtLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jBtnBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -203,8 +203,7 @@ public class VistaGestionProducto extends javax.swing.JInternalFrame {
                 .addComponent(jTxtStock, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jCBxRubro, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(17, Short.MAX_VALUE))
-=======
+                .addContainerGap(17, Short.MAX_VALUE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPnltxtLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jBtnBuscar, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
@@ -217,9 +216,7 @@ public class VistaGestionProducto extends javax.swing.JInternalFrame {
                 .addComponent(jTxtStock, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jCBxRubro, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(106, 106, 106))
->>>>>>> Stashed changes
-        );
+                .addGap(106, 106, 106)));
 
         jPnlBotones.setBackground(new java.awt.Color(243, 239, 224));
 
@@ -349,7 +346,6 @@ public class VistaGestionProducto extends javax.swing.JInternalFrame {
         jPnlContenedorLayout.setHorizontalGroup(
             jPnlContenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPnlContenedorLayout.createSequentialGroup()
-<<<<<<< Updated upstream
                 .addGroup(jPnlContenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPnlTable, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jPnlContenedorLayout.createSequentialGroup()
@@ -359,8 +355,7 @@ public class VistaGestionProducto extends javax.swing.JInternalFrame {
                                 .addComponent(jPnltxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, Short.MAX_VALUE))
                             .addComponent(jPnlBotones, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addContainerGap())
-=======
+                .addContainerGap()
                 .addGap(25, 25, 25)
                 .addGroup(jPnlContenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jPnlBotones, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -368,21 +363,18 @@ public class VistaGestionProducto extends javax.swing.JInternalFrame {
                     .addComponent(jPnltxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPnlTable, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
->>>>>>> Stashed changes
-        );
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE));
         jPnlContenedorLayout.setVerticalGroup(
             jPnlContenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPnlContenedorLayout.createSequentialGroup()
                 .addContainerGap()
-<<<<<<< Updated upstream
+
                 .addComponent(jPnlTable, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPnltxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jPnlBotones, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(48, 48, 48))
-=======
+                .addGap(48, 48, 48)
                 .addGroup(jPnlContenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPnlTable, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPnlContenedorLayout.createSequentialGroup()
@@ -392,7 +384,6 @@ public class VistaGestionProducto extends javax.swing.JInternalFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPnlBotones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(243, Short.MAX_VALUE))
->>>>>>> Stashed changes
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -403,14 +394,14 @@ public class VistaGestionProducto extends javax.swing.JInternalFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-<<<<<<< Updated upstream
+
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jPnlContenedor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(17, 17, 17))
-=======
+
             .addComponent(jPnlContenedor, javax.swing.GroupLayout.DEFAULT_SIZE, 840, Short.MAX_VALUE)
->>>>>>> Stashed changes
+
         );
 
         pack();
